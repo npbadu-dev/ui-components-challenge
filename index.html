@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UI Component Challenge — Build Log</title>
+    <meta
+      name="description"
+      content="A 30-day UI component build challenge, one component shipped per day."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap">
+        <div class="mark">
+          <strong>UICC</strong>
+          <span>/ build log</span>
+        </div>
+        <nav>
+          <a href="#grid">component index</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="wrap">
+          <p class="eyebrow">30 days · 30 components</p>
+          <h1>Every component, built once, in the open.</h1>
+          <p class="hero-lede">
+            One UI component shipped per day, no repeats, no shortcuts. Each
+            entry below links to its own working build — markup, styles, and
+            behaviour included.
+          </p>
+
+          <div class="ledger">
+            <div class="ledger-count">
+              <span class="num" id="builtCount">00</span>
+              <span class="of">/ 30 shipped</span>
+            </div>
+            <div class="ledger-ticks" id="ledgerTicks" aria-hidden="true"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="grid-section" id="grid">
+        <div class="wrap">
+          <div class="filter-bar" role="tablist" aria-label="Filter components">
+            <button
+              class="filter-btn is-active"
+              data-filter="all"
+              role="tab"
+              aria-selected="true"
+            >
+              All
+            </button>
+            <button
+              class="filter-btn"
+              data-filter="built"
+              role="tab"
+              aria-selected="false"
+            >
+              Shipped
+            </button>
+            <button
+              class="filter-btn"
+              data-filter="locked"
+              role="tab"
+              aria-selected="false"
+            >
+              Upcoming
+            </button>
+          </div>
+
+          <div class="card-grid" id="cardGrid"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <p>UI Component Challenge — updated daily.</p>
+        <p id="footerCount"></p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

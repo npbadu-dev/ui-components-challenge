@@ -1,0 +1,440 @@
+/* ==========================================================================
+   UI Component Challenge — Build Ledger
+   Token system
+   ========================================================================== */
+
+:root {
+  /* Color */
+  --bg: #10141c;
+  --bg-panel: #161b26;
+  --bg-card: #1b212e;
+  --bg-card-hover: #212836;
+  --grid-line: rgba(255, 255, 255, 0.045);
+  --rule: #2a3140;
+  --rule-soft: #232a37;
+  --ink: #e7e9ee;
+  --ink-dim: #8a92a6;
+  --ink-faint: #565f72;
+  --amber: #f5a623;
+  --amber-dim: rgba(245, 166, 35, 0.14);
+  --teal: #4fd1c5;
+  --teal-dim: rgba(79, 209, 197, 0.14);
+  --rust: #c9705f;
+
+  /* Type */
+  --font-display: "Space Grotesk", "Arial Narrow", sans-serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
+
+  /* Layout */
+  --page-max: 1180px;
+  --radius: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  background-image: radial-gradient(var(--grid-line) 1px, transparent 1px);
+  background-size: 28px 28px;
+  color: var(--ink);
+  font-family: var(--font-body);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--amber);
+  outline-offset: 3px;
+}
+
+.wrap {
+  max-width: var(--page-max);
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+.site-header {
+  border-bottom: 1px solid var(--rule);
+  background: linear-gradient(180deg, var(--bg-panel), transparent);
+}
+
+.site-header .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 22px;
+  padding-bottom: 22px;
+}
+
+.mark {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  color: var(--ink-dim);
+}
+
+.mark strong {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: 0.02em;
+}
+
+.site-header nav a {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  color: var(--ink-faint);
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+  transition:
+    color 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.site-header nav a:hover {
+  color: var(--amber);
+  border-color: var(--amber);
+}
+
+/* ==========================================================================
+   Hero
+   ========================================================================== */
+
+.hero {
+  padding: 72px 0 56px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin: 0 0 18px;
+}
+
+.eyebrow::before {
+  content: "";
+  width: 18px;
+  height: 1px;
+  background: var(--amber);
+  display: inline-block;
+}
+
+.hero h1 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(36px, 5.5vw, 60px);
+  line-height: 1.02;
+  letter-spacing: -0.01em;
+  margin: 0 0 20px;
+  max-width: 14ch;
+}
+
+.hero-lede {
+  color: var(--ink-dim);
+  font-size: 17px;
+  max-width: 52ch;
+  margin: 0 0 40px;
+}
+
+/* Progress ledger */
+
+.ledger {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 24px;
+  padding: 20px 24px;
+  background: var(--bg-panel);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+}
+
+.ledger-count {
+  font-family: var(--font-mono);
+  white-space: nowrap;
+}
+
+.ledger-count .num {
+  font-family: var(--font-display);
+  font-size: 30px;
+  color: var(--teal);
+  font-weight: 700;
+}
+
+.ledger-count .of {
+  color: var(--ink-faint);
+  font-size: 14px;
+}
+
+.ledger-ticks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  flex: 1;
+  min-width: 220px;
+}
+
+.tick {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  border: 1px solid var(--rule);
+  background: transparent;
+}
+
+.tick.is-built {
+  background: var(--teal);
+  border-color: var(--teal);
+}
+
+/* ==========================================================================
+   Filter bar
+   ========================================================================== */
+
+.filter-bar {
+  padding: 28px 0 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: transparent;
+  border: 1px solid var(--rule);
+  color: var(--ink-dim);
+  padding: 8px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition:
+    border-color 0.15s ease,
+    color 0.15s ease,
+    background 0.15s ease;
+}
+
+.filter-btn:hover {
+  color: var(--ink);
+  border-color: var(--ink-faint);
+}
+
+.filter-btn.is-active {
+  color: var(--bg);
+  background: var(--amber);
+  border-color: var(--amber);
+}
+
+/* ==========================================================================
+   Card grid
+   ========================================================================== */
+
+.grid-section {
+  padding: 24px 0 96px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(272px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-card);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  padding: 20px 20px 18px;
+  min-height: 190px;
+  text-decoration: none;
+  color: var(--ink);
+  overflow: hidden;
+  transition:
+    transform 0.15s ease,
+    border-color 0.15s ease,
+    background 0.15s ease;
+}
+
+.card.is-built {
+  cursor: pointer;
+}
+
+.card.is-built:hover {
+  transform: translateY(-3px);
+  border-color: var(--teal);
+  background: var(--bg-card-hover);
+}
+
+.card.is-locked {
+  cursor: default;
+  opacity: 0.72;
+}
+
+.card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.day-tag {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: var(--ink-faint);
+}
+
+.stamp {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 4px 8px;
+  border-radius: 3px;
+  transform: rotate(-6deg);
+  white-space: nowrap;
+}
+
+.stamp.built {
+  color: var(--teal);
+  border: 1.5px solid var(--teal);
+  background: var(--teal-dim);
+}
+
+.stamp.locked {
+  color: var(--ink-faint);
+  border: 1.5px dashed var(--rule);
+  background: transparent;
+}
+
+.card h3 {
+  font-family: var(--font-display);
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1.25;
+  margin: 0 0 8px;
+}
+
+.card p {
+  font-size: 13.5px;
+  color: var(--ink-dim);
+  line-height: 1.5;
+  margin: 0;
+  flex: 1;
+}
+
+.card-foot {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid var(--rule-soft);
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.card.is-built .card-foot {
+  color: var(--amber);
+}
+
+.card.is-locked .card-foot {
+  color: var(--ink-faint);
+}
+
+.card-foot .arrow {
+  transition: transform 0.15s ease;
+}
+
+.card.is-built:hover .card-foot .arrow {
+  transform: translateX(3px);
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.site-footer {
+  border-top: 1px solid var(--rule);
+  padding: 28px 0 40px;
+}
+
+.site-footer .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.site-footer p {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--ink-faint);
+  margin: 0;
+}
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+
+@media (max-width: 640px) {
+  .wrap {
+    padding: 0 20px;
+  }
+
+  .hero {
+    padding: 52px 0 40px;
+  }
+
+  .ledger {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -30,9 +30,12 @@
 
   /* Divider / misc (if needed) */
   --sidebar-border: rgba(255, 255, 255, 0.08);
+
+  /* New added */
+  --theme-icon: grey;
 }
 
-[data-theme="light"] {
+.light {
   /* Surface */
   --sidebar-bg: #FBFBFC;               /* near-white background */
 
@@ -55,4 +58,7 @@
 
   /* Divider / misc */
   --sidebar-border: rgba(0, 0, 0, 0.06);
+
+  /* New added */
+  --theme-icon: orange;
 }

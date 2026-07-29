@@ -18,3 +18,18 @@ themeToggle.addEventListener("click", () => {
     text.textContent = "Dark Mode";
   }
 });
+
+// active or in-active
+const navLinks = document.querySelectorAll(".nav-link");
+
+navLinks.forEach((link) => {
+  link.addEventListener("click", function (e) {
+    e.preventDefault(); // Remove this if your links go to real pages
+
+    // Remove active class from all links
+    navLinks.forEach((item) => item.classList.remove("active"));
+
+    // Add active class to the clicked link
+    this.classList.add("active");
+  });
+});

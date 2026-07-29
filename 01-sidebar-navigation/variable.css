@@ -1,0 +1,58 @@
+/* =========================================================
+   Sidebar Navigation — Color Tokens
+   Default theme: DARK
+   Override theme: LIGHT via [data-theme="light"]
+   ========================================================= */
+
+:root {
+  /* Brand (constant across themes) */
+  --sidebar-brand-icon: #E1571F;       /* orange arrow logo mark */
+
+  /* Surface */
+  --sidebar-bg: #14132B;               /* dark navy sidebar background */
+
+  /* Default nav item */
+  --sidebar-item-bg: transparent;
+  --sidebar-item-bg-hover: rgba(255, 255, 255, 0.06);
+  --sidebar-item-text: rgba(255, 255, 255, 0.85);
+  --sidebar-item-text-hover: #FFFFFF;
+  --sidebar-item-icon: rgba(255, 255, 255, 0.85);
+  --sidebar-item-icon-hover: #FFFFFF;
+
+  /* Active nav item */
+  --sidebar-item-active-bg: #DD5A22;   /* orange pill */
+  --sidebar-item-active-bg-hover: #C74E1B;
+  --sidebar-item-active-text: #FFFFFF;
+  --sidebar-item-active-icon: #FFFFFF;
+
+  /* Logo wordmark */
+  --sidebar-logo-text: #FFFFFF;
+
+  /* Divider / misc (if needed) */
+  --sidebar-border: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="light"] {
+  /* Surface */
+  --sidebar-bg: #FBFBFC;               /* near-white background */
+
+  /* Default nav item */
+  --sidebar-item-bg: transparent;
+  --sidebar-item-bg-hover: #F1F1F5;
+  --sidebar-item-text: #1A1A2E;
+  --sidebar-item-text-hover: #0E0E1F;
+  --sidebar-item-icon: #1A1A2E;
+  --sidebar-item-icon-hover: #0E0E1F;
+
+  /* Active nav item */
+  --sidebar-item-active-bg: #14132B;   /* dark navy pill */
+  --sidebar-item-active-bg-hover: #1F1E3D;
+  --sidebar-item-active-text: #FFFFFF;
+  --sidebar-item-active-icon: #FFFFFF;
+
+  /* Logo wordmark */
+  --sidebar-logo-text: #14132B;
+
+  /* Divider / misc */
+  --sidebar-border: rgba(0, 0, 0, 0.06);
+}

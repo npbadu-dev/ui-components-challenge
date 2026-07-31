@@ -24,7 +24,7 @@ const components = [
     slug: "hero-section",
     title: "Hero Section",
     desc: "Above-the-fold banner with headline, CTA, and supporting visual.",
-    built: false,
+    built: true,
   },
   {
     day: 4,

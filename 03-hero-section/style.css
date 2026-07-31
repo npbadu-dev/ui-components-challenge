@@ -95,12 +95,15 @@ html {
   box-shadow: 0px 0px 0 0 transparent;
 }
 .hero-section {
-  padding: 50px 100px;
+  padding: 120px 100px;
   height: 75vh;
   /* background-color: red; */
+
+  display: flex;
+  justify-content: space-between;
 }
 .hero-heading {
-  font-size: 4.8rem;
+  font-size: 5.6rem;
   font-weight: 800;
   line-height: 1.1;
   max-width: 19ch;
@@ -113,7 +116,7 @@ html {
   font-size: 1.8rem;
   max-width: 50ch;
   color: #555;
-  margin-bottom: 26px;
+  margin-bottom: 64px;
 }
 .btn-box {
   display: flex;
@@ -141,7 +144,7 @@ html {
   gap: 12px;
   align-items: center;
 }
-.feature-box{
+.feature-box {
   display: flex;
   gap: 24px;
 }
@@ -154,17 +157,26 @@ html {
   align-items: center;
   justify-content: center;
 }
-.feature-context{
+.feature-context {
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
-.feature-heading{
+.feature-heading {
   font-size: 1.4rem;
   font-weight: 600;
 }
-.feature-description{
+.feature-description {
   font-size: 1.3rem;
   color: #888;
   font-weight: 500;
+}
+.illustration-container {
+  padding-top: 50px;
+}
+.hero-img {
+  height: 300px;
+  border-top-left-radius: 22px;
+  border-bottom-right-radius: 22px;
+  box-shadow: -5px 5px 10px 10px rgba(0, 0, 0, 0.2);
 }

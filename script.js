@@ -38,7 +38,7 @@ const components = [
     slug: "registration-form",
     title: "Registration Form",
     desc: "Multi-field signup with live validation and a password-strength meter.",
-    built: false,
+    built: true,
   },
   {
     day: 6,

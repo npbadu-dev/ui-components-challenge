@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="content-container">
+        <div class="left-side">
+          <div class="logo">PixelFit</div>
+          <h2 class="welcome">Welcome Back!</h2>
+          <p class="description login-desc">
+            Log in to continue your fitness journey and achieve your goals.
+          </p>
+          <img
+            src="assests/hero-img.png"
+            alt="image of company"
+            class="img-official"
+          />
+          <div class="feature-box">
+            <div class="feature">
+              <div class="feature-icon"><i class="fa-solid fa-shield"></i></div>
+              <div class="feature-context">
+                <p class="feature-heading">Your data is safe with us</p>
+                <p class="feature-description">
+                  We never share your information.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="right-side">
+          <h1 class="login-heading">Log In</h1>
+          <p class="description login-desc">
+            Enter your credentials to access your account
+          </p>
+          <form action="#" class="login-form">
+            <label for="email">Email Address</label>
+            <div class="input-box">
+              <i class="fa-solid fa-envelope left-icon"></i>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Enter your email"
+                required
+              />
+            </div>
+
+            <label for="password">Password</label>
+            <div class="input-box">
+              <i class="fa-solid fa-lock left-icon"></i>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="Enter your password"
+                required
+              />
+              <i
+                class="fa-solid fa-eye-slash right-icon"
+                id="togglePassword"
+              ></i>
+            </div>
+
+            <a href="#" class="forgot-password">Forgot Password?</a>
+
+            <button type="submit">
+              <i class="fa-solid fa-right-from-bracket"></i>
+              <span>Log In</span>
+            </button>
+          </form>
+
+          <div class="divider">
+            <span class="line"></span>
+            <span class="text">or continue with</span>
+            <span class="line"></span>
+          </div>
+          <div class="icon-box">
+            <a href="#" class="logo-link">
+              <i class="fa-brands fa-google logo-company"></i>
+              <span class="logo-name">Google</span>
+            </a>
+            <a href="#" class="logo-link">
+              <i class="fa-brands fa-apple logo-company"></i>
+              <span class="logo-name">Apple</span>
+            </a>
+            <a href="#" class="logo-link">
+              <i class="fa-brands fa-facebook logo-company"></i>
+              <span class="logo-name">Facebook</span>
+            </a>
+          </div>
+          <div class="signup-box">
+            <p class="description">Don't have an account?</p>
+            <span class="signup">Sign Up</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

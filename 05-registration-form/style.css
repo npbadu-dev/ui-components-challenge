@@ -280,10 +280,74 @@ button:hover {
   color: #e63e00;
 }
 
-.first-row, .third-row, .fourth-row{
+.first-row,
+.third-row,
+.fourth-row {
   display: flex;
   gap: 2rem;
 }
-#dob{
+.form-group {
+  width: 30rem;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.date-input-box,
+.select-box {
+  display: flex;
+  align-items: center;
+  height: 52px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background: #fff;
+  padding: 0 15px;
+}
+
+.date-input-box i,
+.select-box i {
   color: #777;
+  font-size: 1.6rem;
+}
+.date-input-box input {
+  display: flex;
+  flex: 1;
+  border: none;
+  outline: none;
+  margin-left: 12px;
+  font-size: 15px;
+  color: #555;
+  background: transparent;
+  /* padding: 0 .8rem; */
+}
+/* Hide default calendar icon */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  cursor: pointer;
+}
+.select-box{
+    position:relative;
+}
+
+.select-box select{
+    flex:1;
+    border:none;
+    outline:none;
+    appearance:none;
+    background:transparent;
+    margin-left:12px;
+    font-size:15px;
+    color:#666;
+    cursor:pointer;
+}
+.arrow{
+    margin-right: 1rem;
+    pointer-events:none;
+    color:#777;
 }

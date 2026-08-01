@@ -139,19 +139,27 @@
               </div>
             </div>
             <div class="fourth-row">
-              <div class="fourth-row-first">
-                <label for="dob">Full Name</label>
-                <div class="input-box">
-                  <input
-                    type="date"
-                    name="dob"
-                    id="dob"
-                    placeholder="Enter your name"
-                    required
-                  />
+              <div class="fourth-row-first form-group">
+                <label>Date of Birth</label>
+                <div class="date-input-box">
+                  <i class="fa-solid fa-calendar"></i> <input type="date" />
                 </div>
               </div>
-              
+              <div class="fourth-row-second form-group">
+                <label>Gender</label>
+
+                <div class="select-box">
+                  <i class="fa-solid fa-user-tag"></i>
+                  <select>
+                    <option selected disabled>Select your gender</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Other</option>
+                  </select>
+
+                  <i class="fa-solid fa-angle-down arrow"></i>
+                </div>
+              </div>
             </div>
 
             <a href="#" class="forgot-password">Forgot Password?</a>

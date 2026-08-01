@@ -109,8 +109,8 @@ html {
 }
 
 .login-heading {
-  font-size: 3.2rem;
-  margin-bottom: 1.2rem;
+  font-size: 2.4rem;
+  margin-bottom: 0.8rem;
 }
 .login-desc {
   margin-bottom: 2.4rem;
@@ -138,10 +138,7 @@ label {
 .input-box {
   position: relative;
   margin-bottom: 2.8rem;
-  margin-left: 0.6rem;
-}
-label {
-  margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 .input-box input {
   width: 100%;
@@ -188,7 +185,6 @@ input:focus {
   box-shadow: 0 0 0 1px #777;
   color: #777;
 }
-
 #email.invalid {
   box-shadow: 0 0 0 2px red;
 }
@@ -282,4 +278,12 @@ button:hover {
 }
 .signup:hover {
   color: #e63e00;
+}
+
+.first-row, .third-row, .fourth-row{
+  display: flex;
+  gap: 2rem;
+}
+#dob{
+  color: #777;
 }

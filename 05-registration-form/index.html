@@ -56,37 +56,102 @@
           </div>
         </div>
         <div class="right-side">
-          <h1 class="login-heading">Log In</h1>
+          <h1 class="login-heading">Create Your Account</h1>
           <p class="description login-desc">
-            Enter your credentials to access your account
+            Fill in the details below to register with PixelFit.
           </p>
           <form action="#" class="login-form">
-            <label for="email">Email Address</label>
-            <div class="input-box">
-              <i class="fa-solid fa-envelope left-icon"></i>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                placeholder="Enter your email"
-                required
-              />
+            <div class="first-row">
+              <div class="first-row-first">
+                <label for="name">Full Name</label>
+                <div class="input-box">
+                  <i class="fa-solid fa-user left-icon"></i>
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    placeholder="Enter your name"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="first-row-secod">
+                <label for="username">Username</label>
+                <div class="input-box">
+                  <i class="fa-solid fa-at left-icon"></i>
+                  <input
+                    type="text"
+                    name="username"
+                    id="username"
+                    placeholder="Choose a username"
+                    required
+                  />
+                </div>
+              </div>
             </div>
-
-            <label for="password">Password</label>
-            <div class="input-box">
-              <i class="fa-solid fa-lock left-icon"></i>
-              <input
-                type="password"
-                name="password"
-                id="password"
-                placeholder="Enter your password"
-                required
-              />
-              <i
-                class="fa-solid fa-eye-slash right-icon"
-                id="togglePassword"
-              ></i>
+            <div class="second-row">
+              <label for="email">Email Address</label>
+              <div class="input-box">
+                <i class="fa-solid fa-envelope left-icon"></i>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Enter your email"
+                  required
+                />
+              </div>
+            </div>
+            <div class="third-row">
+              <div class="third-row-first">
+                <label for="password">Password</label>
+                <div class="input-box">
+                  <i class="fa-solid fa-lock left-icon"></i>
+                  <input
+                    type="password"
+                    name="password"
+                    id="password"
+                    placeholder="create a password"
+                    required
+                  />
+                  <i
+                    class="fa-solid fa-eye-slash right-icon"
+                    id="togglePassword"
+                  ></i>
+                </div>
+              </div>
+              <div class="third-row-second">
+                <label for="password">Confirm Password</label>
+                <div class="input-box">
+                  <i class="fa-solid fa-lock left-icon"></i>
+                  <input
+                    type="password"
+                    name="password"
+                    id="password"
+                    placeholder="confirm your password"
+                    required
+                  />
+                  <i
+                    class="fa-solid fa-eye-slash right-icon"
+                    id="togglePassword"
+                  ></i>
+                </div>
+              </div>
+            </div>
+            <div class="fourth-row">
+              <div class="fourth-row-first">
+                <label for="dob">Full Name</label>
+                <div class="input-box">
+                  <input
+                    type="date"
+                    name="dob"
+                    id="dob"
+                    placeholder="Enter your name"
+                    required
+                  />
+                </div>
+              </div>
+              
             </div>
 
             <a href="#" class="forgot-password">Forgot Password?</a>

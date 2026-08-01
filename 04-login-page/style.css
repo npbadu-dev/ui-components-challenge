@@ -134,7 +134,7 @@ label {
   margin-bottom: 2.8rem;
   margin-left: 0.6rem;
 }
-label{
+label {
   margin-bottom: 1rem;
 }
 .input-box input {
@@ -174,7 +174,7 @@ label{
   font-size: 14px;
   margin-bottom: 1.4rem;
 }
-.forgot-password:hover{
+.forgot-password:hover {
   text-decoration: underline;
 }
 input:focus {
@@ -248,9 +248,18 @@ button:hover {
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 8px 12px;
+  transition: all 0.3s ease-in-out;
+}
+.logo-link:hover {
+  color: #eee;
+  background-color: #777;
 }
 .logo-name {
   color: #333;
+  transition: all 0.3s ease-in-out;
+}
+.logo-link:hover .logo-name {
+  color: #eee;
 }
 .signup-box {
   display: flex;
@@ -263,4 +272,8 @@ button:hover {
   font-size: 1.4rem;
   font-weight: 600;
   cursor: pointer;
+  transition: all 0.2s ease;
+}
+.signup:hover {
+  color: #e63e00;
 }

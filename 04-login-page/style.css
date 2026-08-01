@@ -12,8 +12,26 @@ html {
   overflow-x: hidden;
 }
 .main-container {
-  margin: 2rem;
+  margin: 5rem;
 }
+.content-container {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+}
+.left-side {
+  background-color: #fbfdea;
+  padding: 3.8rem 4.4rem 4.2rem 3.8rem;
+  border-top-left-radius: 14px;
+  border-bottom-left-radius: 14px;
+}
+.right-side {
+  background-color: #fff;
+  padding: 2.8rem;
+  border-top-right-radius: 14px;
+  border-bottom-right-radius: 14px;
+}
+
 .feature {
   display: flex;
   gap: 12px;
@@ -22,6 +40,7 @@ html {
 .feature-box {
   display: flex;
   gap: 24px;
+  padding-left: 2rem;
 }
 .feature-icon {
   font-size: 1.4rem;
@@ -47,17 +66,35 @@ html {
   font-weight: 500;
 }
 .img-official {
-  height: 40rem;
-  border-top-left-radius: 100px;
-  border-bottom-right-radius: 100px;
-  box-shadow: -5px 5px 10px 10px rgba(0, 0, 0, 0.2);
+  /* border-radius: 14px; */
+  border-top-left-radius: 22px;
+  border-bottom-right-radius: 22px;
+  margin-bottom: 4.2rem;
 }
 
-.content-container{
-    display: flex;
-    gap: 10px;
+.icon {
+  font-size: 1.6rem;
 }
 
-.icon{
-    font-size: 1.6rem;
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+.logo {
+  color: orangered;
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 5rem;
+}
+.welcome {
+  font-size: 4rem;
+  margin-bottom: 1.4rem;
+}
+.description {
+  font-size: 1.6rem;
+  color: #777;
+}
+.login-desc {
+  max-width: 40ch;
+  margin-bottom: 3.8rem;
 }

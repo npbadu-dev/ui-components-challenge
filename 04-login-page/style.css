@@ -27,7 +27,10 @@ html {
 }
 .right-side {
   background-color: #fff;
-  padding: 2.8rem;
+  /* padding: 3.8rem 4.4rem 4.2rem 3.8rem; */
+  padding-top: 8rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
   border-top-right-radius: 14px;
   border-bottom-right-radius: 14px;
 }
@@ -91,10 +94,112 @@ html {
   margin-bottom: 1.4rem;
 }
 .description {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   color: #777;
 }
 .login-desc {
   max-width: 40ch;
   margin-bottom: 3.8rem;
+}
+
+.login-heading {
+  font-size: 3.2rem;
+  margin-bottom: 1.2rem;
+}
+.login-desc {
+  margin-bottom: 2.4rem;
+}
+label {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 1rem;
+}
+input {
+  padding: 8px 18px;
+  margin-left: 0.6rem;
+  border-radius: 8px;
+  border: none;
+  /* border: 1px solid #ccc; */
+  box-shadow: 0 0 0 1px #ccc;
+  font-size: 1.6rem;
+  margin-bottom: 2.8rem;
+}
+input:focus {
+  outline: none;
+  box-shadow: 0 0 0 1px #777;
+  color: #777;
+}
+
+#email.invalid {
+  box-shadow: 0 0 0 2px red;
+}
+
+#email.valid {
+  box-shadow: 0 0 0 2px green;
+}
+button {
+  padding: 12px 20px;
+  border-radius: 12px;
+  border: none;
+  color: #fff;
+  background-color: orangered;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+
+  font-size: 1.8rem;
+  cursor: pointer;
+
+  margin-bottom: 2rem;
+}
+.continue {
+  text-align: center;
+  margin-bottom: 2.2rem;
+}
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  margin-bottom: 2.2rem;
+}
+
+.line {
+  flex: 1;
+  height: 1px;
+  background-color: #d9d9d9;
+}
+
+.text {
+  color: #777;
+  font-size: 14px;
+  white-space: nowrap;
+}
+.icon-box{
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+.logo-link{
+    text-decoration: none;
+    font-size: 1.4rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 8px 12px;
+}
+.logo-name{
+    color: #333;
+}
+.signup-box{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.signup{
+    color: orangered;
+    font-size: 1.4rem;
+    font-weight: 600;
 }

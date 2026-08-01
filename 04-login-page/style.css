@@ -154,6 +154,13 @@ button {
   cursor: pointer;
 
   margin-bottom: 2rem;
+
+  transition: all 0.3s ease;
+}
+button:hover {
+  background-color: #e63e00;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(255, 69, 0, 0.3);
 }
 .continue {
   text-align: center;
@@ -178,29 +185,29 @@ button {
   font-size: 14px;
   white-space: nowrap;
 }
-.icon-box{
-    display: flex;
-    gap: 2rem;
-    margin-bottom: 4rem;
+.icon-box {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 4rem;
 }
-.logo-link{
-    text-decoration: none;
-    font-size: 1.4rem;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 8px 12px;
+.logo-link {
+  text-decoration: none;
+  font-size: 1.4rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 8px 12px;
 }
-.logo-name{
-    color: #333;
+.logo-name {
+  color: #333;
 }
-.signup-box{
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+.signup-box {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
-.signup{
-    color: orangered;
-    font-size: 1.4rem;
-    font-weight: 600;
-    cursor: pointer;
+.signup {
+  color: orangered;
+  font-size: 1.4rem;
+  font-weight: 600;
+  cursor: pointer;
 }

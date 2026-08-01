@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="content-container">
+        <div class="left-side">
+          <div class="logo">PixelFit</div>
+          <h2 class="welcome">Join PixelFit Community</h2>
+          <p class="description login-desc">
+            Create your account and become a part of a community that transforms
+            live.
+          </p>
+          <img
+            src="assests/hero-img.png"
+            alt="image of company"
+            class="img-official"
+          />
+          <div class="feature-box">
+            <div class="feature">
+              <div class="feature-icon">
+                <i class="fa-solid fa-user-group"></i>
+              </div>
+              <div class="feature-context">
+                <p class="feature-heading">Inculsive Community</p>
+                <p class="feature-description">Everyone is Welcome</p>
+              </div>
+            </div>
+            <div class="feature">
+              <div class="feature-icon">
+                <i class="fa-solid fa-bullseye"></i>
+              </div>
+              <div class="feature-context">
+                <p class="feature-heading">Track Progress</p>
+                <p class="feature-description">Monitor your Journey</p>
+              </div>
+            </div>
+            <div class="feature">
+              <div class="feature-icon">
+                <i class="fa-solid fa-trophy"></i>
+              </div>
+              <div class="feature-context">
+                <p class="feature-heading">Achieve Goals</p>
+                <p class="feature-description">We're here to support</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="right-side">
+          <h1 class="login-heading">Create Your Account</h1>
+          <p class="description login-desc">
+            Fill in the details below to register with PixelFit.
+          </p>
+          <form action="#" class="login-form">
+            <div class="first-row">
+              <div class="first-row-first">
+                <label for="name">Full Name</label>
+                <div class="input-box">
+                  <i class="fa-solid fa-user left-icon"></i>
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    placeholder="Enter your name"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="first-row-secod">
+                <label for="username">Username</label>
+                <div class="input-box">
+                  <i class="fa-solid fa-at left-icon"></i>
+                  <input
+                    type="text"
+                    name="username"
+                    id="username"
+                    placeholder="Choose a username"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="second-row">
+              <label for="email">Email Address</label>
+              <div class="input-box">
+                <i class="fa-solid fa-envelope left-icon"></i>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Enter your email"
+                  required
+                />
+              </div>
+            </div>
+            <div class="third-row">
+              <div class="third-row-first">
+                <label for="password">Password</label>
+                <div class="input-box">
+                  <i class="fa-solid fa-lock left-icon"></i>
+                  <input
+                    type="password"
+                    name="password"
+                    id="password"
+                    placeholder="create a password"
+                    required
+                  />
+                  <i
+                    class="fa-solid fa-eye-slash right-icon"
+                    id="togglePassword"
+                  ></i>
+                </div>
+              </div>
+              <div class="third-row-second">
+                <label for="confirmPassword">Confirm Password</label>
+                <div class="input-box">
+                  <i class="fa-solid fa-lock left-icon"></i>
+                  <input
+                    type="password"
+                    name="confirmPassword"
+                    id="confirmPassword"
+                    placeholder="confirm your password"
+                    required
+                  />
+                  <i
+                    class="fa-solid fa-eye-slash right-icon"
+                    id="toggleConfirmPassword"
+                  ></i>
+                </div>
+              </div>
+            </div>
+            <div class="fourth-row">
+              <div class="fourth-row-first form-group">
+                <label>Date of Birth</label>
+                <div class="date-input-box">
+                  <i class="fa-solid fa-calendar"></i> <input type="date" />
+                </div>
+              </div>
+              <div class="fourth-row-second form-group">
+                <label>Gender</label>
+
+                <div class="select-box">
+                  <i class="fa-solid fa-user-tag"></i>
+                  <select>
+                    <option selected disabled>Select your gender</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Other</option>
+                  </select>
+
+                  <i class="fa-solid fa-angle-down arrow"></i>
+                </div>
+              </div>
+            </div>
+            <div class="fifth-row">
+              <label for="number"
+                >Phone Number
+                <span class="opt description">(Optional)</span></label
+              >
+              <div class="input-box">
+                <i class="fa-solid fa-phone left-icon"></i>
+                <input
+                  type="number"
+                  name="number"
+                  id="number"
+                  placeholder="Enter your phone number"
+                  required
+                />
+              </div>
+            </div>
+            <div class="sixth-row">
+              <input type="checkbox" name="check" id="check" />
+              <label for="check" class="check"
+                >I agree to the
+                <span class="col-ored">Terms of Service</span> and
+                <span class="col-ored">Privacy Policy</span></label
+              >
+            </div>
+            <button type="submit">
+              <i class="fa-solid fa-user-plus"></i>
+              <span>Register</span>
+            </button>
+          </form>
+
+          <div class="divider">
+            <span class="line"></span>
+            <span class="text">or continue with</span>
+            <span class="line"></span>
+          </div>
+          <div class="icon-box">
+            <a href="#" class="logo-link">
+              <i class="fa-brands fa-google logo-company"></i>
+              <span class="logo-name">Google</span>
+            </a>
+            <a href="#" class="logo-link">
+              <i class="fa-brands fa-apple logo-company"></i>
+              <span class="logo-name">Apple</span>
+            </a>
+            <a href="#" class="logo-link">
+              <i class="fa-brands fa-facebook logo-company"></i>
+              <span class="logo-name">Facebook</span>
+            </a>
+          </div>
+          <div class="signup-box">
+            <p class="description">Already have an account?</p>
+            <a href="../04-login-page/index.html" class="signup">Log In</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -37,13 +37,17 @@ html {
 
 .feature {
   display: flex;
+  flex-direction: column;
   gap: 12px;
   align-items: center;
 }
 .feature-box {
   display: flex;
   gap: 24px;
-  padding-left: 2rem;
+  /* padding-left: 2rem; */
+  background-color: white;
+  padding: 12px 16px;
+  border-radius: 8px;
 }
 .feature-icon {
   font-size: 1.4rem;
@@ -52,7 +56,8 @@ html {
   border-radius: 50%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
+  margin-left: -10rem;
 }
 .feature-context {
   display: flex;
@@ -60,11 +65,11 @@ html {
   gap: 5px;
 }
 .feature-heading {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: 600;
 }
 .feature-description {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   color: #888;
   font-weight: 500;
 }
@@ -72,7 +77,7 @@ html {
   /* border-radius: 14px; */
   border-top-left-radius: 22px;
   border-bottom-right-radius: 22px;
-  margin-bottom: 4.2rem;
+  margin-bottom: 8.2rem;
 }
 
 .icon {
@@ -87,24 +92,41 @@ html {
   color: orangered;
   font-size: 2.8rem;
   font-weight: 800;
-  margin-bottom: 5rem;
+  margin-bottom: 11rem;
 }
 .welcome {
   font-size: 4rem;
   margin-bottom: 1.4rem;
+  max-width: 16ch;
+  position: relative;
+}
+.welcome::after{
+  content: "New Here?";
+  position: absolute;
+  top: -5rem;
+  left: -1.2rem;
+
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  background-color: #edff9b;
+  color: #333;
+  padding: 8px 12px;
+  text-align: center;
+  border-radius: 22px;
+
 }
 .description {
   font-size: 1.4rem;
   color: #777;
 }
 .login-desc {
-  max-width: 40ch;
   margin-bottom: 3.8rem;
 }
 
 .login-heading {
-  font-size: 3.2rem;
-  margin-bottom: 1.2rem;
+  font-size: 2.4rem;
+  margin-bottom: 0.8rem;
 }
 .login-desc {
   margin-bottom: 2.4rem;
@@ -132,10 +154,7 @@ label {
 .input-box {
   position: relative;
   margin-bottom: 2.8rem;
-  margin-left: 0.6rem;
-}
-label {
-  margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 .input-box input {
   width: 100%;
@@ -182,7 +201,6 @@ input:focus {
   box-shadow: 0 0 0 1px #777;
   color: #777;
 }
-
 #email.invalid {
   box-shadow: 0 0 0 2px red;
 }
@@ -211,7 +229,6 @@ button {
 }
 button:hover {
   background-color: #e63e00;
-  transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(255, 69, 0, 0.3);
 }
 .continue {
@@ -239,7 +256,9 @@ button:hover {
 }
 .icon-box {
   display: flex;
-  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
   margin-bottom: 4rem;
 }
 .logo-link {
@@ -272,10 +291,116 @@ button:hover {
   font-size: 1.4rem;
   font-weight: 600;
   cursor: pointer;
-  text-decoration: none;
   transition: all 0.2s ease;
+  text-decoration: none;
 }
 .signup:hover {
   color: #e63e00;
   text-decoration: underline;
+}
+
+.first-row,
+.third-row,
+.fourth-row {
+  display: flex;
+  gap: 2rem;
+}
+.form-group {
+  width: 30rem;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.date-input-box,
+.select-box {
+  display: flex;
+  align-items: center;
+  height: 52px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background: #fff;
+  padding: 0 15px;
+}
+
+.date-input-box i,
+.select-box i {
+  color: #777;
+  font-size: 1.6rem;
+}
+.date-input-box input {
+  display: flex;
+  flex: 1;
+  border: none;
+  outline: none;
+  margin-left: 12px;
+  font-size: 15px;
+  color: #555;
+  background: transparent;
+  /* padding: 0 .8rem; */
+}
+/* Hide default calendar icon */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  cursor: pointer;
+}
+.select-box {
+  position: relative;
+}
+
+.select-box select {
+  flex: 1;
+  border: none;
+  outline: none;
+  appearance: none;
+  background: transparent;
+  margin-left: 12px;
+  font-size: 15px;
+  color: #666;
+  cursor: pointer;
+}
+.arrow {
+  margin-right: 1rem;
+  pointer-events: none;
+  color: #777;
+}
+.fifth-row {
+  margin-top: 2rem;
+}
+/* Chrome, Safari, Edge */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+.sixth-row{
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.check{
+  color: #777;
+  cursor: pointer;
+}
+.col-ored{
+  color: orangered;
+  font-weight: 600;
+}
+#check{
+  outline: none;
+  box-shadow: none;
+  accent-color: orangered;
 }

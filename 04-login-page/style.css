@@ -28,7 +28,7 @@ html {
 .right-side {
   background-color: #fff;
   /* padding: 3.8rem 4.4rem 4.2rem 3.8rem; */
-  padding-top: 8rem;
+  padding-top: 5rem;
   padding-left: 4rem;
   padding-right: 4rem;
   border-top-right-radius: 14px;
@@ -113,17 +113,69 @@ label {
   font-size: 1.6rem;
   font-weight: 500;
   color: #333;
-  margin-bottom: 1rem;
 }
-input {
+/* input {
   padding: 8px 18px;
   margin-left: 0.6rem;
   border-radius: 8px;
   border: none;
-  /* border: 1px solid #ccc; */
   box-shadow: 0 0 0 1px #ccc;
   font-size: 1.6rem;
   margin-bottom: 2.8rem;
+} */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  /* gap: 12px; */
+}
+
+.input-box {
+  position: relative;
+  margin-bottom: 2.8rem;
+  margin-left: 0.6rem;
+}
+label{
+  margin-bottom: 1rem;
+}
+.input-box input {
+  width: 100%;
+  height: 50px;
+  padding: 0 45px; /* space for left & right icons */
+  border: none;
+  box-shadow: 0 0 0 1px #ccc;
+
+  border-radius: 10px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.left-icon,
+.right-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+  font-size: 1.6rem;
+}
+
+.left-icon {
+  left: 15px;
+}
+
+.right-icon {
+  right: 15px;
+  cursor: pointer;
+}
+
+.forgot-password {
+  align-self: flex-end;
+  text-decoration: none;
+  color: #ff5a36;
+  font-size: 14px;
+  margin-bottom: 1.4rem;
+}
+.forgot-password:hover{
+  text-decoration: underline;
 }
 input:focus {
   outline: none;
@@ -204,6 +256,7 @@ button:hover {
   display: flex;
   align-items: center;
   gap: 1rem;
+  margin-bottom: 4rem;
 }
 .signup {
   color: orangered;

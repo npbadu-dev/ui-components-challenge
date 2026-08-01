@@ -18,3 +18,17 @@ emailInput.addEventListener("input", () => {
     emailInput.classList.remove("valid");
   }
 });
+
+// password
+const password = document.getElementById("password");
+const toggle = document.getElementById("togglePassword");
+
+toggle.addEventListener("click", () => {
+  if (password.type === "password") {
+    password.type = "text";
+    toggle.classList.replace("fa-eye-slash", "fa-eye");
+  } else {
+    password.type = "password";
+    toggle.classList.replace("fa-eye", "fa-eye-slash");
+  }
+});

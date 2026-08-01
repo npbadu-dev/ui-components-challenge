@@ -43,27 +43,41 @@
           </p>
           <form action="#" class="login-form">
             <label for="email">Email Address</label>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="Enter your email"
-              required
-            />
+            <div class="input-box">
+              <i class="fa-solid fa-envelope left-icon"></i>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Enter your email"
+                required
+              />
+            </div>
 
-            <label for="password">Password </label>
-            <input
-              type="password"
-              name="password"
-              id="password"
-              placeholder="Enter your password"
-              required
-            />
-            <button>
+            <label for="password">Password</label>
+            <div class="input-box">
+              <i class="fa-solid fa-lock left-icon"></i>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="Enter your password"
+                required
+              />
+              <i
+                class="fa-solid fa-eye-slash right-icon"
+                id="togglePassword"
+              ></i>
+            </div>
+
+            <a href="#" class="forgot-password">Forgot Password?</a>
+
+            <button type="submit">
               <i class="fa-solid fa-right-from-bracket"></i>
               <span>Log In</span>
             </button>
           </form>
+
           <div class="divider">
             <span class="line"></span>
             <span class="text">or continue with</span>

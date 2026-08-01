@@ -21,14 +21,24 @@ emailInput.addEventListener("input", () => {
 
 // password
 const password = document.getElementById("password");
-const toggle = document.getElementById("togglePassword");
+const confirmPassword = document.getElementById("confirmPassword");
+const togglePassword = document.getElementById("togglePassword");
+const toggleConfirmPassword = document.getElementById("toggleConfirmPassword");
 
-toggle.addEventListener("click", () => {
-  if (password.type === "password") {
-    password.type = "text";
-    toggle.classList.replace("fa-eye-slash", "fa-eye");
+function toggleVisibility(input, toggleIcon) {
+  if (input.type === "password") {
+    input.type = "text";
+    toggleIcon.classList.replace("fa-eye-slash", "fa-eye");
   } else {
-    password.type = "password";
-    toggle.classList.replace("fa-eye", "fa-eye-slash");
+    input.type = "password";
+    toggleIcon.classList.replace("fa-eye", "fa-eye-slash");
   }
+}
+
+togglePassword.addEventListener("click", () => {
+  toggleVisibility(password, togglePassword);
+});
+
+toggleConfirmPassword.addEventListener("click", () => {
+  toggleVisibility(confirmPassword, toggleConfirmPassword);
 });

@@ -15,3 +15,26 @@
   width: 20rem;
   border-radius: 20px;
 }
+.color-picker {
+  display: flex;
+  gap: 18px;
+}
+
+.color-picker input {
+  display: none;
+}
+
+.color-picker label {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--color);
+  cursor: pointer;
+  transition: .2s;
+}
+
+.color-picker input:checked + label {
+  box-shadow:
+    0 0 0 3px #fff,
+    0 0 0 5px #222;
+}

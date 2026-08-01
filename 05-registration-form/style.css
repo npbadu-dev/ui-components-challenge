@@ -104,7 +104,6 @@ html {
   color: #777;
 }
 .login-desc {
-  max-width: 40ch;
   margin-bottom: 3.8rem;
 }
 
@@ -213,7 +212,6 @@ button {
 }
 button:hover {
   background-color: #e63e00;
-  transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(255, 69, 0, 0.3);
 }
 .continue {
@@ -241,7 +239,9 @@ button:hover {
 }
 .icon-box {
   display: flex;
-  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
   margin-bottom: 4rem;
 }
 .logo-link {
@@ -275,9 +275,11 @@ button:hover {
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s ease;
+  text-decoration: none;
 }
 .signup:hover {
   color: #e63e00;
+  text-decoration: underline;
 }
 
 .first-row,
@@ -331,23 +333,57 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   width: 100%;
   cursor: pointer;
 }
-.select-box{
-    position:relative;
+.select-box {
+  position: relative;
 }
 
-.select-box select{
-    flex:1;
-    border:none;
-    outline:none;
-    appearance:none;
-    background:transparent;
-    margin-left:12px;
-    font-size:15px;
-    color:#666;
-    cursor:pointer;
+.select-box select {
+  flex: 1;
+  border: none;
+  outline: none;
+  appearance: none;
+  background: transparent;
+  margin-left: 12px;
+  font-size: 15px;
+  color: #666;
+  cursor: pointer;
 }
-.arrow{
-    margin-right: 1rem;
-    pointer-events:none;
-    color:#777;
+.arrow {
+  margin-right: 1rem;
+  pointer-events: none;
+  color: #777;
+}
+.fifth-row {
+  margin-top: 2rem;
+}
+/* Chrome, Safari, Edge */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+.sixth-row{
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.check{
+  color: #777;
+  cursor: pointer;
+}
+.col-ored{
+  color: orangered;
+  font-weight: 600;
+}
+#check{
+  outline: none;
+  box-shadow: none;
+  accent-color: orangered;
 }

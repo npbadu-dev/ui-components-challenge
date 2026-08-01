@@ -161,12 +161,33 @@
                 </div>
               </div>
             </div>
-
-            <a href="#" class="forgot-password">Forgot Password?</a>
-
+            <div class="fifth-row">
+              <label for="number"
+                >Phone Number
+                <span class="opt description">(Optional)</span></label
+              >
+              <div class="input-box">
+                <i class="fa-solid fa-phone left-icon"></i>
+                <input
+                  type="number"
+                  name="number"
+                  id="number"
+                  placeholder="Enter your phone number"
+                  required
+                />
+              </div>
+            </div>
+            <div class="sixth-row">
+              <input type="checkbox" name="check" id="check" />
+              <label for="check" class="check"
+                >I agree to the
+                <span class="col-ored">Terms of Service</span> and
+                <span class="col-ored">Privacy Policy</span></label
+              >
+            </div>
             <button type="submit">
-              <i class="fa-solid fa-right-from-bracket"></i>
-              <span>Log In</span>
+              <i class="fa-solid fa-user-plus"></i>
+              <span>Register</span>
             </button>
           </form>
 
@@ -190,8 +211,8 @@
             </a>
           </div>
           <div class="signup-box">
-            <p class="description">Don't have an account?</p>
-            <span class="signup">Sign Up</span>
+            <p class="description">Already have an account?</p>
+            <a href="../04-login-page/index.html" class="signup">Log In</a>
           </div>
         </div>
       </div>

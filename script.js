@@ -28,7 +28,7 @@ const components = [
   },
   {
     day: 4,
-    slug: "login-form",
+    slug: "login-page",
     title: "Login Form",
     desc: "Email and password form with validation and social auth buttons.",
     built: true,

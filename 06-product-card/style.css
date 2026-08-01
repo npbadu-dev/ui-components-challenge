@@ -1,0 +1,17 @@
+.card-container {
+  width: 30rem;
+  margin: 5rem auto;
+}
+
+.img-part {
+  background-color: #fcfbea;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.product-img {
+  height: 18rem;
+  width: 20rem;
+  border-radius: 20px;
+}

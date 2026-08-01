@@ -272,8 +272,10 @@ button:hover {
   font-size: 1.4rem;
   font-weight: 600;
   cursor: pointer;
+  text-decoration: none;
   transition: all 0.2s ease;
 }
 .signup:hover {
   color: #e63e00;
+  text-decoration: underline;
 }

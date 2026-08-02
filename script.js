@@ -52,7 +52,7 @@ const components = [
     slug: "pricing-card",
     title: "Pricing Card",
     desc: "Tiered plan comparison with a highlighted recommended plan.",
-    built: false,
+    built: true,
   },
   {
     day: 8,

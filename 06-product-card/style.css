@@ -2,7 +2,7 @@ body {
   background-color: #edff9b;
 }
 .card-container {
-  width: 30rem;
+  width: 40rem;
   margin: 5rem auto;
   background-color: #fff;
   border-radius: 18px;
@@ -11,9 +11,6 @@ body {
 .img-part {
   background-color: #fcfbea;
   padding: 5rem 20px 20px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   border-top-left-radius: 18px;
   border-top-right-radius: 18px;
   position: relative;
@@ -22,8 +19,8 @@ body {
   position: relative;
 
   content: "Best Seller";
-  top: -9.1rem;
-  left: -1rem;
+  top: -16.1rem;
+  left: 2rem;
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 1.5px;
@@ -72,4 +69,80 @@ body {
   box-shadow:
     0 0 0 3px #fff,
     0 0 0 5px #222;
+}
+.description-box {
+  padding: 1rem 3rem;
+}
+.heading-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: -1.4rem;
+}
+.product-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+.price-main {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: orangered;
+}
+.description-content {
+  margin-top: -1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.description-only {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.desc-only {
+  line-height: 1.8px;
+}
+.description {
+  font-size: 1.2rem;
+  color: #777;
+  font-weight: 700;
+}
+.price {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.2rem;
+}
+.price-cut {
+  text-decoration: line-through;
+  color: #777;
+  font-weight: 600;
+  font-size: 1.3rem;
+  margin-top: 1rem;
+}
+.offer {
+  background-color: #edff9b;
+  padding: 4px 8px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+.review {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.stars {
+  color: rgb(230, 230, 12);
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+.review-detail {
+  color: #777;
+  font-size: 1.2rem;
+}
+.line {
+  margin: 0 2rem;
+  color: #ccc;
 }

@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Card</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="card">
+        <div class="card-container">
+          <div class="img-part">
+            <img
+              src="assests/product-img.png"
+              alt="kettlebells img"
+              class="product-img"
+            />
+          </div>
+          <div class="description-box">
+            <div class="heading-box">
+              <h2 class="product-title">Premium Kettlebell 10kg</h2>
+              <div class="price-main">$49.99</div>
+            </div>
+            <div class="description-content">
+              <div class="description-only">
+                <div class="desc-only">
+                  <p class="description">
+                    Durable cast iron with a smooth finish.
+                  </p>
+                  <p class="description">
+                    Perfect for strength training and workouts.
+                  </p>
+                </div>
+                <div class="price">
+                  <div class="price-cut">$69.99</div>
+                  <div class="offer">28% OFF</div>
+                </div>
+              </div>
+
+              <div class="review">
+                <div class="stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="review-detail">(128 reviews)</div>
+              </div>
+            </div>
+          </div>
+          <hr class="line" />
+
+          <div class="color-selection">
+            <div class="color">
+              <div class="color-text">Color</div>
+              <div class="color-picker">
+                <input type="radio" name="color" id="green" checked />
+                <label for="green" style="--color: #d8ec6a"></label>
+
+                <input type="radio" name="color" id="black" />
+                <label for="black" style="--color: #222"></label>
+
+                <input type="radio" name="color" id="orange" />
+                <label for="orange" style="--color: #ff5b0a"></label>
+
+                <input type="radio" name="color" id="gray" />
+                <label for="gray" style="--color: #9c9c9c"></label>
+              </div>
+            </div>
+            <div class="add-to-cart">
+              <button class="cart-btn">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span>Add to Cart</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

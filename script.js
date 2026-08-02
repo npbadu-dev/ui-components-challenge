@@ -45,7 +45,7 @@ const components = [
     slug: "product-card",
     title: "Product Card",
     desc: "Image, price, rating, and quick-add for a storefront grid.",
-    built: false,
+    built: true,
   },
   {
     day: 7,

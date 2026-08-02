@@ -6,7 +6,7 @@
 body {
   font-family: "Courier New", Courier, monospace;
   /* background-color: #edff9b; */
-  background-color: #f9fce6;
+  background-color: #f9fce4;
 }
 html {
   font-size: 62.5%;
@@ -50,7 +50,7 @@ html {
   gap: 8rem;
 }
 .card {
-    margin: 8rem auto;
+  margin: 8rem auto;
 
   background-color: #fff;
   border-radius: 12px;
@@ -140,6 +140,7 @@ ul {
   border-radius: 50%;
 }
 .card-btn {
+  margin-left: 8px;
   padding: 12px 22px;
   background-color: transparent;
   color: #111;
@@ -150,11 +151,68 @@ ul {
   font-size: 1.8rem;
   font-weight: 600;
   cursor: pointer;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
-.card-btn:hover{
+.card-btn:hover {
   background-color: #777;
-    box-shadow: 0 0 0 1px #777;
+  box-shadow: 0 0 0 1px #777;
 
   color: #fff;
+}
+
+.selected {
+  margin-top: 4rem;
+  margin-bottom: 5rem;
+  position: relative;
+  background-color: #fafde3;
+  border: 3px solid #e4ec98;
+  box-shadow: -5px 5px 2px 3px rgba(255, 217, 0, 0.5);
+  
+
+}
+.bold {
+  font-weight: 700;
+}
+.pro-btn {
+  width: 100%;
+  margin-left: 23px;
+  padding: 12px 22px;
+  background-color: orangered;
+  color: #fff;
+  border: none;
+  box-shadow: 0 0 0 1px orangered;
+  border-radius: 12px;
+  max-width: 30rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.pro-btn:hover {
+  background-color: rgb(184, 79, 41);
+  box-shadow: 0 0 0 1px rgb(184, 79, 41);
+
+  color: #fff;
+}
+.btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.alert {
+  width: 200px;
+  text-transform: uppercase;
+  font-size: 2.2rem;
+  font-weight: 600;
+  background-color: #dfeb7b;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  padding: 12px 18px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.select-card-heading{
+  margin-top: 5rem;
 }

@@ -1,18 +1,53 @@
+body {
+  background-color: #edff9b;
+}
 .card-container {
   width: 30rem;
   margin: 5rem auto;
+  background-color: #fff;
+  border-radius: 18px;
 }
 
 .img-part {
   background-color: #fcfbea;
-  padding: 10px 20px;
+  padding: 5rem 20px 20px 20px;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+  position: relative;
+}
+.img-part::before {
+  position: relative;
+
+  content: "Best Seller";
+  top: -9.1rem;
+  left: -1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  word-spacing: 2px;
+  background-color: #c1cb37;
+  padding: 8px 14px;
+  border-radius: 14px;
+}
+.img-part::after {
+  position: absolute;
+  content: "\f004";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400; /* Regular style */
+  top: 2rem;
+  right: 2rem;
+  font-size: 1.8rem;
+  background-color: #fff;
+  padding: 12px;
+  border-radius: 50%;
+  text-align: center;
 }
 .product-img {
-  height: 18rem;
-  width: 20rem;
+  height: 16rem;
+  /* width: 20rem; */
   border-radius: 20px;
 }
 .color-picker {
@@ -30,7 +65,7 @@
   border-radius: 50%;
   background: var(--color);
   cursor: pointer;
-  transition: .2s;
+  transition: 0.2s;
 }
 
 .color-picker input:checked + label {

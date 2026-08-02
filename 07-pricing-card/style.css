@@ -45,3 +45,7 @@ html {
     color: orangered;
     font-weight: 700;
 }
+.card-container{
+    display: flex;
+    gap: 4rem;
+}

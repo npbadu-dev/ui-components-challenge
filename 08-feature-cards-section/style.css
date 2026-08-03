@@ -51,7 +51,7 @@ html {
   gap: 8rem;
 }
 .feature-section {
-  margin: 8rem auto;
+  margin: 2rem auto;
   font-size: 1.8rem;
   padding: 4rem;
   gap: 2rem;
@@ -107,9 +107,15 @@ html {
 }
 .card-footer-box {
   font-size: 2.2rem;
-  display: flex;
-  gap: 3rem;
+  /* display: flex;
+  gap: 3rem; */
   align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+.card-footer-box:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  color: rgb(178, 58, 14);
 }
 .bg-circle {
   position: absolute;
@@ -140,4 +146,7 @@ html {
   top: -50px;
   left: -42px;
   transform: rotate(125deg);
+}
+.no-rotate{
+  transform: rotate(0deg);
 }

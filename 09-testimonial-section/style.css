@@ -1,0 +1,240 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Courier New", Courier, monospace;
+  background-color: #fafbe8;
+}
+html {
+  font-size: 62.5%;
+}
+.main-container {
+  padding: 8rem 12rem;
+}
+.heading-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5rem;
+}
+.title {
+  font-size: 2.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  background-color: #edff9b;
+  padding: 10px 22px;
+  text-align: center;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+}
+.heading {
+  font-size: 5.6rem;
+  font-weight: 900;
+  margin-bottom: 2rem;
+}
+.sub-description {
+  font-size: 2rem;
+  color: #777;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.col-ored {
+  color: orangered;
+  font-weight: 700;
+}
+
+.feature-container {
+  display: flex;
+  gap: 8rem;
+}
+.feature-section {
+  margin: 2rem auto;
+  font-size: 1.8rem;
+  padding: 4rem;
+  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+.row {
+  display: flex;
+  gap: 3rem;
+}
+.card {
+  /* width: 450px; */
+  position: relative;
+  padding: 5rem;
+  background-color: #fff;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  overflow: hidden;
+}
+.profile-img {
+  height: 8rem;
+  width: 8rem;
+  border-radius: 50%;
+}
+.card-row-1 {
+  display: flex;
+  gap: 3rem;
+}
+.card-row-1-col-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  color: #777;
+}
+.person-name {
+  font-weight: 600;
+  font-size: 2.2rem;
+  color: #111;
+}
+.review-star {
+  color: orange;
+}
+.card-row-1-col-3 {
+  display: flex;
+  gap: 0.8rem;
+  padding-top: 2rem;
+}
+.card-row-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-bottom: 4rem;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+  padding-top: 3rem;
+}
+.quote-icon-box {
+  position: absolute;
+  top: -3rem;
+  left: -1.6rem;
+  font-size: 3.8rem;
+  font-weight: 800;
+  color: #ecf2ad;
+}
+.review-description {
+  color: #555;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+.card-row-3 {
+  display: flex;
+  gap: 2rem;
+}
+.card-row-3-icon-left {
+  font-size: 3.2rem;
+  background-color: #edff9b;
+  padding: 14px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+}
+.card-row-3-description-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.card-footer-heading {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #777;
+}
+.card-footer-subheading {
+  color: #111;
+  font-weight: 600;
+  font-size: 2.4rem;
+}
+
+.test-icon-container {
+  display: flex;
+  gap: 3rem;
+  font-size: 3.2rem;
+  align-items: center;
+  justify-content: center;
+}
+.icon-bg {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 24px;
+  border-radius: 50%;
+  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.204);
+  transition: all 0.3s ease-in-out;
+}
+.icon-bg:hover {
+  background-color: #ddd;
+  cursor: pointer;
+}
+.color-picker {
+  display: flex;
+  gap: 18px;
+}
+
+.color-picker input {
+  display: none;
+}
+
+.color-picker label {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--color);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.color-picker input:checked + label {
+  box-shadow:
+    0 0 0 3px #fff,
+    0 0 0 5px #222;
+}
+.color-picker input:checked + label {
+  background: #d8ec6a;
+}
+
+.footer {
+  margin: 10rem auto;
+  width: 140rem;
+  display: flex;
+}
+.footer-card {
+  background-color: #f8fad8;
+
+  font-size: 1.8rem;
+  padding: 3rem 5rem;
+  border-radius: 22px;
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+}
+.footer-col-1 {
+  display: flex;
+  gap: 3rem;
+}
+.footer-icon {
+  font-size: 2.8rem;
+  display: flex;
+  align-items: center;
+  background-color: #edff9b;
+  padding: 18px;
+  border-radius: 50%;
+}
+.footer-description {
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+}
+.footer-heading {
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+.footer-subheading{
+  color: #555;
+}

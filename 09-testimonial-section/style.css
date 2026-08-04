@@ -22,7 +22,7 @@ html {
 }
 .title {
   font-size: 2.2rem;
-  font-weight: 500;
+  font-weight: 600;
   text-transform: uppercase;
   background-color: #edff9b;
   padding: 10px 22px;
@@ -31,14 +31,14 @@ html {
   margin-bottom: 2rem;
 }
 .heading {
-  font-size: 5.2rem;
-  font-weight: 1000;
+  font-size: 5.6rem;
+  font-weight: 900;
   margin-bottom: 2rem;
 }
 .sub-description {
   font-size: 2rem;
   color: #777;
-  font-weight: 500;
+  font-weight: 600;
   margin-bottom: 0.5rem;
 }
 .col-ored {
@@ -72,9 +72,6 @@ html {
   flex-direction: column;
   gap: 5rem;
   overflow: hidden;
-}
-.card-4 {
-  width: 504px;
 }
 
 .card-heading {
@@ -188,4 +185,32 @@ html {
 }
 .footer-subheading {
   color: #777;
+}
+.profile-img {
+  height: 8rem;
+  width: 8rem;
+  border-radius: 50%;
+}
+.card-row-1{
+  display: flex;
+  gap:3rem;
+}
+.card-row-1-col-2{
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  color: #777;
+}
+.person-name{
+  font-weight: 600;
+  font-size: 2.2rem;
+  color: #111;
+}
+.review-star{
+  color: orange;
+}
+.card-row-1-col-3{
+  display: flex;
+  gap: .8rem;
+  padding-top: 2rem;
 }

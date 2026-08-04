@@ -198,3 +198,43 @@ html {
 .color-picker input:checked + label {
   background: #d8ec6a;
 }
+
+.footer {
+  margin: 10rem auto;
+  width: 140rem;
+  display: flex;
+}
+.footer-card {
+  background-color: #f8fad8;
+
+  font-size: 1.8rem;
+  padding: 3rem 5rem;
+  border-radius: 22px;
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+}
+.footer-col-1 {
+  display: flex;
+  gap: 3rem;
+}
+.footer-icon {
+  font-size: 2.8rem;
+  display: flex;
+  align-items: center;
+  background-color: #edff9b;
+  padding: 18px;
+  border-radius: 50%;
+}
+.footer-description {
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+}
+.footer-heading {
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+.footer-subheading{
+  color: #555;
+}

@@ -150,3 +150,51 @@ html {
   font-weight: 600;
   font-size: 2.4rem;
 }
+
+.test-icon-container {
+  display: flex;
+  gap: 3rem;
+  font-size: 3.2rem;
+  align-items: center;
+  justify-content: center;
+}
+.icon-bg {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 24px;
+  border-radius: 50%;
+  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.204);
+  transition: all 0.3s ease-in-out;
+}
+.icon-bg:hover {
+  background-color: #ddd;
+  cursor: pointer;
+}
+.color-picker {
+  display: flex;
+  gap: 18px;
+}
+
+.color-picker input {
+  display: none;
+}
+
+.color-picker label {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--color);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.color-picker input:checked + label {
+  box-shadow:
+    0 0 0 3px #fff,
+    0 0 0 5px #222;
+}
+.color-picker input:checked + label {
+  background: #d8ec6a;
+}

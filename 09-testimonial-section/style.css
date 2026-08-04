@@ -119,7 +119,9 @@ html {
   color: #ecf2ad;
 }
 .review-description {
-  color: #333;
+  color: #555;
+  font-size: 1.8rem;
+  font-weight: 600;
 }
 .card-row-3 {
   display: flex;

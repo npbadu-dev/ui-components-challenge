@@ -1,0 +1,226 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Courier New", Courier, monospace;
+  background-color: #f4fcaf;
+}
+html {
+  font-size: 62.5%;
+}
+.main-container {
+  padding: 3rem;
+  font-size: 1.8rem;
+  font-family: "Roboto", sans-serif;
+}
+.footer-container {
+  background-color: #fefefd;
+  padding: 5rem;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+}
+.logo {
+  color: orangered;
+  font-size: 4.4rem;
+  font-weight: 600;
+}
+.company-description {
+  color: #777;
+}
+.row-1-col-1 {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.company-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+.feature {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.feature-card {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+.feature-icon {
+  font-size: 2.8rem;
+  background-color: #f6fac3;
+  padding: 12px 14px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+}
+.feature-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.feature-heading {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+.feature-subheading {
+  color: #777;
+}
+.footer-1 {
+  display: flex;
+  gap: 20rem;
+}
+.row-1-col-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding-top: 3rem;
+}
+.row1-col2-heading {
+  font-size: 2.2rem;
+  font-weight: 600;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid orangered;
+}
+.navigation-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.nav-link {
+  text-decoration: none;
+  color: #777;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+}
+.nav-link:hover {
+  text-decoration: underline;
+  color: #333;
+}
+.second-col {
+  display: flex;
+  gap: 10rem;
+}
+.third-col {
+  padding-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.cta {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.cta-description {
+  color: #555;
+}
+.cta-btn-box {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.email-box {
+  font-size: 1.6rem;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 0 0 2px #777;
+  outline: none;
+  color: #777;
+  transition: all 0.3s ease;
+}
+.email-box:active,
+.email-box:focus {
+  box-shadow: 0 0 0 2px #333;
+  color: #555;
+}
+.cta-icon-box {
+  color: #fff;
+  background-color: orangered;
+  padding: 12px 16px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+.app-advertise {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.app-btn {
+  display: flex;
+  gap: 5rem;
+}
+.playstore {
+  display: flex;
+  gap: 0.7rem;
+  align-items: center;
+  color: #fff;
+  background-color: #111;
+  padding: 8px 12px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.app-content {
+  display: flex;
+  flex-direction: column;
+}
+.app-heading {
+  font-size: 1.3rem;
+  font-width: 600;
+}
+.playstore:hover {
+  background-color: #777;
+  color: #111;
+}
+.social-link {
+  list-style: none;
+  display: flex;
+  gap: 3rem;
+}
+.social-link-icon {
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  text-decoration: none;
+  color: black;
+  background-color: #fff;
+  padding: 8px;
+  box-shadow: 0 0 0 1px #777;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+}
+.social-link-icon:hover {
+  background-color: #777;
+  color: #fff;
+}
+.footer-2 {
+  border-top: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 2rem;
+}
+.copy-right {
+  color: #777;
+  font-weight: 500;
+}
+.policy {
+  display: flex;
+  gap: 3rem;
+  color: #777;
+  font-weight: 500;
+}
+.p1 {
+  border-right: 2px solid #777;
+  padding-right: 3rem;
+}

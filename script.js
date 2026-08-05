@@ -59,7 +59,7 @@ const components = [
     slug: "feature-cards-section",
     title: "Feature Cards Section",
     desc: "Icon-led grid explaining core product capabilities.",
-    built: false,
+    built: true,
   },
   {
     day: 9,

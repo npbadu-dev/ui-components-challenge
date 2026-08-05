@@ -70,3 +70,39 @@ html {
 .feature-subheading{
   color: #777;
 }
+.footer-1{
+  display: flex;
+  gap: 20rem;
+}
+.row-1-col-2{
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding-top: 3rem;
+}
+.row1-col2-heading{
+  font-size: 2.2rem;
+  font-weight: 600;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid orangered;
+}
+.navigation-links{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.nav-link{
+  text-decoration: none;
+  color: #777;
+  font-weight: 500;
+  transition: all .3s ease-in-out;
+}
+.nav-link:hover{
+  text-decoration: underline;
+  color: #333;
+}
+.second-col{
+  display: flex;
+  gap: 10rem;
+}

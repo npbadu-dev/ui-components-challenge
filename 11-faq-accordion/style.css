@@ -47,6 +47,7 @@ html {
 }
 .inactive-faq {
   margin-top: 3rem;
+  margin-bottom: 3rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -60,7 +61,11 @@ html {
   border-radius: 12px;
   border: none;
   padding: 12px 22px;
-  width: 81rem;
+  width: 85rem;
+}
+.faq-qns-list {
+  background-color: #fbfae7;
+  box-shadow: 1px 0px 0px 2px #edf2ae;
 }
 .faq-bar {
   display: flex;
@@ -93,4 +98,22 @@ html {
 }
 .faq-text {
   font-weight: 700;
+}
+.faq-text-description {
+  font-size: 1.4rem;
+  color: #777;
+}
+.faq-qns-container {
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+.faq-qns-icon-left {
+  margin-top: -4rem;
+  background-color: #edff9b;
+}
+.faq-right-icon:hover {
+  background-color: #8fa918;
+  color: #222;
 }

@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Courier New", Courier, monospace;
+  background-color: #fbfbee;
+}
+html {
+  font-size: 62.5%;
+}
+.main-container {
+  padding: 0.5rem 5rem;
+}
+.heading-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3rem;
+}
+.title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  background-color: #edff9b;
+  padding: 10px 22px;
+  text-align: center;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+}
+.heading {
+  font-size: 4.2rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+.sub-description {
+  font-size: 1.6rem;
+  color: #777;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.col-ored {
+  color: orangered;
+  font-weight: 700;
+}
+.inactive-faq {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+}
+.faq-list {
+  background-color: #fff;
+  box-shadow: 1px 0px 13px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  border: none;
+  padding: 12px 22px;
+  width: 85rem;
+}
+.faq-qns-list {
+  background-color: #fbfae7;
+  box-shadow: 1px 0px 0px 2px #edf2ae;
+}
+.faq-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  align-items: center;
+}
+.faq-content-1 {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+.icon-bg {
+  background-color: #edf2ae;
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.faq-content-2 {
+  background-color: #f9fae1;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.faq-content-2:hover {
+  background-color: #edff9b;
+  color: #555;
+}
+.faq-text {
+  font-weight: 700;
+}
+.faq-text-description {
+  font-size: 1.4rem;
+  color: #777;
+}
+.faq-qns-container {
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+.faq-qns-icon-left {
+  margin-top: -4rem;
+  background-color: #edff9b;
+}
+.faq-right-icon:hover {
+  background-color: #8fa918;
+  color: #222;
+}

@@ -11,7 +11,7 @@ html {
   font-size: 62.5%;
 }
 .main-container {
-  padding: .5rem 5rem;
+  padding: 0.5rem 5rem;
 }
 .heading-content {
   display: flex;
@@ -43,5 +43,54 @@ html {
 }
 .col-ored {
   color: orangered;
+  font-weight: 700;
+}
+.inactive-faq {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+}
+.faq-list {
+  background-color: #fff;
+  box-shadow: 1px 0px 13px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  border: none;
+  padding: 12px 22px;
+  width: 81rem;
+}
+.faq-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  align-items: center;
+}
+.faq-content-1 {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+.icon-bg {
+  background-color: #edf2ae;
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.faq-content-2 {
+  background-color: #f9fae1;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.faq-content-2:hover {
+  background-color: #edff9b;
+  color: #555;
+}
+.faq-text {
   font-weight: 700;
 }

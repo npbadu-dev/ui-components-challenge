@@ -66,7 +66,7 @@ const components = [
     slug: "testimonial-section",
     title: "Testimonial Section",
     desc: "Customer quotes with avatar, name, and rating.",
-    built: false,
+    built: true,
   },
   {
     day: 10,

@@ -73,7 +73,7 @@ const components = [
     slug: "footer",
     title: "Footer",
     desc: "Site-wide footer with link columns, social icons, and legal text.",
-    built: false,
+    built: true,
   },
   {
     day: 11,

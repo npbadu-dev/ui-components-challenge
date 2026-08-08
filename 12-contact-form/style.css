@@ -185,7 +185,7 @@ input:focus {
 }
 
 .textarea-wrapper textarea {
-  width: 100%;
+  width: 115%;
   height: 150px;
 
   box-sizing: border-box;
@@ -227,4 +227,7 @@ input:focus {
   top: 17px;
   left: 17px;
   pointer-events: none;
+}
+.subject-only{
+  height: 50px !important;
 }

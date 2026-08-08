@@ -264,6 +264,10 @@ button[type="submit"]{
   cursor: pointer;
   font-size: 1.6rem;
   font-weight: 600;
+  transition: all .2s ease-in-out;
+}
+button[type="submit"]:hover{
+  background-color: #bd4519;
 }
 .submitted{
   color: #777;

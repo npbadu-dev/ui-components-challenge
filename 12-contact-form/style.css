@@ -185,7 +185,7 @@ input:focus {
 }
 
 .textarea-wrapper textarea {
-  width: 100%;
+  width: 115%;
   height: 150px;
 
   box-sizing: border-box;
@@ -193,7 +193,7 @@ input:focus {
 
   font-family: Arial, sans-serif;
   font-size: 13px;
-  color: #333;
+  color: #777;
 
   background: #fff;
   border: 1px solid #e1e1e6;
@@ -227,4 +227,49 @@ input:focus {
   top: 17px;
   left: 17px;
   pointer-events: none;
+}
+.subject-only {
+  height: 50px !important;
+}
+.sixth-row {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 2rem;
+  font-size: 1.4rem;
+}
+.check {
+  color: #777;
+  cursor: pointer;
+}
+#check {
+  outline: none;
+  box-shadow: none;
+  accent-color: orangered;
+}
+.row-5{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+button[type="submit"]{
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding: 18px 44px;
+  background-color: orangered;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1.6rem;
+  font-weight: 600;
+  transition: all .2s ease-in-out;
+}
+button[type="submit"]:hover{
+  background-color: #bd4519;
+}
+.submitted{
+  color: #777;
+  font-size: 1.5rem;
 }

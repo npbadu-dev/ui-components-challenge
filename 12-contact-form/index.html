@@ -72,12 +72,21 @@
                 </div>
               </div>
               <div class="row-2 flex-col">
-                <label for="subject" class="row1-label">Subject </label>
-                <textarea
-                  name="subject"
-                  id="subject"
-                  class="subject"
-                ></textarea>
+                <div class="message-field">
+                  <label for="message">Subject</label>
+
+                  <div class="textarea-wrapper subject-wrapper">
+                    <span class="message-icon"
+                      ><i class="fa-solid fa-tag"></i
+                    ></span>
+
+                    <textarea
+                      id="message"
+                      placeholder="Type your message here..."
+                      class="subject-only"
+                    ></textarea>
+                  </div>
+                </div>
               </div>
               <div class="row-3">
                 <div class="message-field">
@@ -95,11 +104,12 @@
                   </div>
                 </div>
               </div>
-              <div class="row-4">
-                <input type="radio" name="checkbox" id="checkbox" />
-                <label for="checkbox"
-                  >I agree to the <span class="ored">Privacy Policy</span> and
-                  <span class="ored">Terms of Services</span>.</label
+              <div class="sixth-row">
+                <input type="checkbox" name="check" id="check" />
+                <label for="check" class="check"
+                  >I agree to the
+                  <span class="col-ored">Terms of Service</span> and
+                  <span class="col-ored">Privacy Policy</span></label
                 >
               </div>
               <div class="row-5">
@@ -117,7 +127,6 @@
             </form>
           </div>
         </div>
-        <div class="contact-feature">112</div>
       </div>
     </div>
     <script src="script.js"></script>

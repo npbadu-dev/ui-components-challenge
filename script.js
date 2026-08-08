@@ -80,7 +80,7 @@ const components = [
     slug: "faq-accordion",
     title: "FAQ Accordion",
     desc: "Expand and collapse question list with keyboard support.",
-    built: false,
+    built: true,
   },
   {
     day: 12,

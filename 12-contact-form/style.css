@@ -193,7 +193,7 @@ input:focus {
 
   font-family: Arial, sans-serif;
   font-size: 13px;
-  color: #333;
+  color: #777;
 
   background: #fff;
   border: 1px solid #e1e1e6;
@@ -228,6 +228,22 @@ input:focus {
   left: 17px;
   pointer-events: none;
 }
-.subject-only{
+.subject-only {
   height: 50px !important;
+}
+.sixth-row {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 2rem;
+  font-size: 1.4rem;
+}
+.check {
+  color: #777;
+  cursor: pointer;
+}
+#check {
+  outline: none;
+  box-shadow: none;
+  accent-color: orangered;
 }

@@ -10,6 +10,10 @@ body {
 html {
   font-size: 62.5%;
 }
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
 .main-container {
   padding: 2rem 5rem;
 }
@@ -60,13 +64,13 @@ html {
 }
 .contact-form {
   background-color: #fff;
-  padding: 3rem 5rem;
+  padding: 3rem 3rem;
 }
 .form-heading {
   display: flex;
   align-items: center;
   gap: 3rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 .contact-form-icon {
   font-size: 2rem;
@@ -89,4 +93,138 @@ html {
 .contact-form-subheading {
   font-size: 1.4rem;
   color: #777;
+}
+.form-box {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.row-1 {
+  display: flex;
+  gap: 4rem;
+}
+.row1-label {
+  color: #111;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.section-1 {
+  gap: 1rem;
+  justify-content: center;
+  align-items: flex-start;
+}
+.row1-label ~ input {
+  padding: 8px 18px;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 0 0 1px #ccc;
+  color: #777;
+}
+.row1-label ~ input:focus {
+  outline: none;
+  border: none;
+  box-shadow: 0 0 0 1px #777;
+}
+.input-box {
+  position: relative;
+  margin-bottom: 2.8rem;
+  margin-left: 0.6rem;
+}
+
+.input-box input {
+  width: 100%;
+  /* height: 50px; */
+  padding: 8px 45px; /* space for left & right icons */
+  border: none;
+  box-shadow: 0 0 0 1px #ccc;
+
+  border-radius: 10px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+.left-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #dae18d;
+  font-size: 1.6rem;
+}
+.left-icon {
+  left: 15px;
+}
+input:focus {
+  outline: none;
+  box-shadow: 0 0 0 1px #777;
+  color: #777;
+}
+#email.invalid {
+  box-shadow: 0 0 0 2px red;
+}
+
+#email.valid {
+  box-shadow: 0 0 0 2px green;
+}
+
+.message-field {
+  width: 100%;
+  max-width: 570px;
+}
+
+.message-field label {
+  display: block;
+  margin-bottom: 8px;
+
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #222;
+}
+
+.textarea-wrapper {
+  position: relative;
+}
+
+.textarea-wrapper textarea {
+  width: 100%;
+  height: 150px;
+
+  box-sizing: border-box;
+  padding: 17px 16px 16px 48px;
+
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  color: #333;
+
+  background: #fff;
+  border: 1px solid #e1e1e6;
+  border-radius: 10px;
+
+  outline: none;
+  resize: none;
+}
+
+.textarea-wrapper textarea::placeholder {
+  color: #8b8b99;
+  opacity: 1;
+}
+
+.textarea-wrapper textarea:focus {
+  border-color: #d8d8df;
+}
+
+.message-icon {
+  position: absolute;
+  top: 17px;
+  left: 17px;
+
+  color: #cbdc5a;
+  font-size: 20px;
+
+  pointer-events: none;
+}
+.message-icon {
+  position: absolute;
+  top: 17px;
+  left: 17px;
+  pointer-events: none;
 }

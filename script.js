@@ -87,7 +87,7 @@ const components = [
     slug: "contact-form",
     title: "Contact Form",
     desc: "Name, email, and message fields with inline validation.",
-    built: false,
+    built: true,
   },
   {
     day: 13,

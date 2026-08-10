@@ -30,7 +30,7 @@ html {
   border-radius: 12px;
   margin-bottom: 2rem;
   display: flex;
-  gap: .6rem;
+  gap: 0.6rem;
   align-items: center;
   justify-content: center;
 }
@@ -45,62 +45,62 @@ html {
   font-weight: 600;
   margin-bottom: 0.5rem;
 }
-.title-icon{
-    color: #777;
+.title-icon {
+  color: #777;
 }
-.subscribe-container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 3rem;
+.subscribe-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3rem;
 }
-.subscribe-btn-container{
-    position: relative;
-    font-size: 2.2rem;
+.subscribe-btn-container {
+  position: relative;
+  font-size: 2.2rem;
 }
-input{
-    padding: 20px 300px 20px 66px;
-    border: none;
-    color: #777;
-    font-size: 2.2rem;
-    border-radius: 12px;
-    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+input {
+  padding: 20px 300px 20px 66px;
+  border: none;
+  color: #777;
+  font-size: 2.2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
 }
-input:focus{
-    outline: none;
-    border: none;
-    box-shadow: 0 0 0 1px rgba(227, 243, 47, 0.563);
-    color: #777;
+input:focus {
+  outline: none;
+  border: none;
+  box-shadow: 0 0 0 1px rgba(227, 243, 47, 0.563);
+  color: #777;
 }
-.subs-icon{
-    position: absolute;
-    color: #E0E69C;
-    top: 22px;
-    left: 23px;
+.subs-icon {
+  position: absolute;
+  color: #e0e69c;
+  top: 22px;
+  left: 23px;
 }
-.btn-submit{
-    position: absolute;
-    display: flex;
-    gap: 1.8rem;
-    padding: 16px 12px;
-    background-color: orangered;
-    color: #fff;
-    font-size: 1.8rem;
-    font-weight: 500;
-    border: none;
-    border-top-right-radius: 12px;
-    border-bottom-right-radius: 12px;
-    top: 6px;
-    right: 5px;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all .3s ease-in-out;
+.btn-submit {
+  position: absolute;
+  display: flex;
+  gap: 1.8rem;
+  padding: 16px 12px;
+  background-color: orangered;
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 500;
+  border: none;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  top: 6px;
+  right: 5px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
-.btn-submit:hover{
-    background-color: #ccc;
-    box-shadow: 0 0 0 1px orangered;
-    color: #333;
+.btn-submit:hover {
+  background-color: #ccc;
+  box-shadow: 0 0 0 1px orangered;
+  color: #333;
 }
 #email.invalid {
   box-shadow: 0 0 0 2px red;
@@ -108,4 +108,46 @@ input:focus{
 
 #email.valid {
   box-shadow: 0 0 0 2px green;
+}
+.feature-container-box {
+  margin-top: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.feature-box {
+  display: flex;
+  gap: 5rem;
+}
+.feature-card {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  font-size: 1.8rem;
+}
+.feature-card:not(:last-child) {
+  border-right: 1px solid #ccc;
+  padding-right: 3rem;
+}
+.feature-icon {
+  background-color: #eef3b1;
+  padding: 12px 14px;
+  font-size: 2.6rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.f-icon{
+    padding: 14px 12px;
+}
+.feature-heading {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+.desc {
+  color: #777;
+  font-size: 1.4rem;
+  font-weight: 600;
 }

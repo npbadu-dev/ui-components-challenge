@@ -48,3 +48,64 @@ html {
 .title-icon{
     color: #777;
 }
+.subscribe-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+}
+.subscribe-btn-container{
+    position: relative;
+    font-size: 2.2rem;
+}
+input{
+    padding: 20px 300px 20px 66px;
+    border: none;
+    color: #777;
+    font-size: 2.2rem;
+    border-radius: 12px;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+input:focus{
+    outline: none;
+    border: none;
+    box-shadow: 0 0 0 1px rgba(227, 243, 47, 0.563);
+    color: #777;
+}
+.subs-icon{
+    position: absolute;
+    color: #E0E69C;
+    top: 22px;
+    left: 23px;
+}
+.btn-submit{
+    position: absolute;
+    display: flex;
+    gap: 1.8rem;
+    padding: 16px 12px;
+    background-color: orangered;
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 500;
+    border: none;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    top: 6px;
+    right: 5px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+.btn-submit:hover{
+    background-color: #ccc;
+    box-shadow: 0 0 0 1px orangered;
+    color: #333;
+}
+#email.invalid {
+  box-shadow: 0 0 0 2px red;
+}
+
+#email.valid {
+  box-shadow: 0 0 0 2px green;
+}

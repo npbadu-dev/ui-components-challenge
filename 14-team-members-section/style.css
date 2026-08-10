@@ -5,7 +5,7 @@
 }
 body {
   font-family: "Courier New", Courier, monospace;
-  background-color: #fafbe8;
+  background-color: #fdfcf5;
 }
 html {
   font-size: 60%;
@@ -55,7 +55,7 @@ html {
   justify-content: center;
 }
 .member-card {
-    width: 300px;
+  width: 300px;
   background-color: #fff;
   padding: 2rem 3rem;
   border-radius: 12px;
@@ -75,9 +75,9 @@ html {
   box-shadow: -2px -2px 10px 5px rgba(0, 0, 0, 0.1);
   transform: translateY(2px);
 }
-.member-card-box{
-    display: flex;
-    gap: 3rem;
+.member-card-box {
+  display: flex;
+  gap: 3rem;
 }
 .m1-img {
   height: 150px;
@@ -140,4 +140,60 @@ html {
 .media-icon:hover {
   background-color: #ccc;
   cursor: pointer;
+}
+
+.footer-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5rem;
+}
+.footer-box {
+  background-color: #f4f5cf;
+  padding: 3rem;
+  border-radius: 14px;
+}
+.footer-card{
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    gap: 3rem;
+}
+.footer-card:not(:last-child){
+    border-right: 1px solid #ccc;
+}
+.footer-context-box{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.footer-icon-box{
+    height: 50px;
+    font-size: 2.2rem;
+    background-color: #fff;
+    padding: 12px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer-header{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+.footer-number{
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+.footer-heading{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.footer-footer{
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+    color: #555;
+    font-weight: 600;
 }

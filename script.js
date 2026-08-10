@@ -94,7 +94,7 @@ const components = [
     slug: "newsletter-subscription",
     title: "Newsletter Subscription",
     desc: "Email capture block with a confirmation state.",
-    built: false,
+    built: true,
   },
   {
     day: 14,

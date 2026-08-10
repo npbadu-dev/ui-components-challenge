@@ -68,6 +68,11 @@ html {
   border: none;
   box-shadow: 0 0 8px 3px rgba(0, 0, 0, 0.1);
   gap: 2rem;
+  width: 300px;
+}
+.member-card-box{
+    display: flex;
+    gap: 3rem;
 }
 .icon-box {
   font-size: 2.8rem;
@@ -160,4 +165,8 @@ html {
   gap: 0.4rem;
   color: #555;
   font-weight: 600;
+}
+.shopify-icon{
+    padding: 18px 20px;
+    font-size: 3.2rem;
 }

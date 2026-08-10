@@ -45,6 +45,83 @@ html {
   font-weight: 600;
   margin-bottom: 0.5rem;
 }
-.ored{
-    color: orangered;
+.ored {
+  color: orangered;
+}
+.member-container {
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.member-card {
+  background-color: #fff;
+  padding: 2rem 3rem;
+  border-radius: 12px;
+  box-shadow: 0 0 8px 3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.m1-img {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.img-box {
+  position: relative;
+}
+.img-icon {
+  position: absolute;
+  background-color: #eff1bb;
+  padding: 12px 14px;
+  border-radius: 50%;
+  font-size: 1.8rem;
+  top: 107px;
+  right: -10px;
+  z-index: 1000;
+  border: 5px solid #fff;
+}
+.member-name {
+  font-size: 2rem;
+  margin-top: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+.member-role {
+  font-size: 1.6rem;
+  color: #929813;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.member-desc {
+    margin-top: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  align-items: center;
+  font-size: 1.4rem;
+  color: #555;
+  font-weight: 500;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #ccc;
+}
+.member-social-media {
+  margin-top: 2rem;
+  display: flex;
+  gap: 4rem;
+  margin-bottom: 2rem;
+}
+.media-icon {
+  font-size: 2.2rem;
+  border-radius: 50%;
+  padding: 12px;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.12);
+  transition: all .3s ease-in-out;
+}
+.media-icon:hover{
+    background-color: #ccc;
+    cursor: pointer;
 }

@@ -48,6 +48,9 @@ html {
   font-size: 1.7rem;
   color: #aaa;
 }
+.ic-2:hover{
+  cursor: pointer;
+}
 .separator-2{
   position: absolute;
   top: 15px;

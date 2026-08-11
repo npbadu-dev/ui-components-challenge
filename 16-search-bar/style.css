@@ -39,14 +39,41 @@ html {
   top: 1.9rem;
   left: 2rem;
   font-size: 1.7rem;
+  color: #ccc;
 }
 .ic-2 {
   position: absolute;
   top: 1.9rem;
-  left: 50rem;
+  right: 30rem;
+  font-size: 1.7rem;
+  color: #aaa;
+}
+.separator-2{
+  position: absolute;
+  top: 15px;
+  right: 27rem;
+  height: 45%;
+  width: 1px;
+  background-color: #ccc;
 }
 #category {
   position: absolute;
+  top: 1.4rem;
+  right: 10rem;
+  border: none;
+  background-color: transparent;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #555;
+  transition: all .3s ease-in-out;
+}
+#category:hover{
+  cursor: pointer;
+  color: #333;
+}
+#category:focus{
+  border: none;
+  outline: none;
 }
 .ic-4 {
   position: absolute;
@@ -57,4 +84,18 @@ html {
   padding: 12px;
   border-radius: 14px;
   text-align: center;
+  transition: all .2s ease-in-out;
+}
+.ic-4:hover{
+  background-color: #9ea608;
+  cursor: pointer;
+  color: #fff;
+}
+.separator{
+  position: absolute;
+  top: 15px;
+  right: 7rem;
+  height: 45%;
+  width: 1px;
+  background-color: #ccc;
 }

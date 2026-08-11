@@ -101,7 +101,7 @@ const components = [
     slug: "team-members-section",
     title: "Team Members Section",
     desc: "Grid of profile photos, roles, and social links.",
-    built: false,
+    built: true,
   },
   {
     day: 15,

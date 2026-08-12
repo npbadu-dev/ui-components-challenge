@@ -108,7 +108,7 @@ const components = [
     slug: "statistics-section",
     title: "Statistics Section",
     desc: "Animated counters for key metrics.",
-    built: false,
+    built: true,
   },
   {
     day: 16,

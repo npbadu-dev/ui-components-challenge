@@ -115,7 +115,7 @@ const components = [
     slug: "search-bar",
     title: "Search Bar",
     desc: "Input with icon, live suggestions, and a clear button.",
-    built: false,
+    built: true,
   },
   {
     day: 17,

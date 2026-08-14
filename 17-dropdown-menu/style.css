@@ -10,3 +10,51 @@ body {
 html {
   font-size: 62.5%;
 }
+.main-container {
+  margin: 5rem 10rem;
+}
+.navigation-bar {
+  display: flex;
+  align-items: center;
+  font-size: 1.8rem;
+  gap: 8rem;
+  padding: 2.4rem 5rem;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+}
+.logo-box {
+  font-size: 2.6rem;
+  font-weight: 600;
+  color: orangered;
+}
+.nav-link-box {
+  list-style: none;
+  display: flex;
+  gap: 3rem;
+}
+.nav-link-box li > a {
+  text-decoration: none;
+  color: #111;
+  font-size: 1.8rem;
+  font-weight: 600;
+  background-color: red;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 12px;
+}
+.search-box {
+  display: flex;
+  align-items: center;
+  padding-right: 2.4rem;
+  position: relative;
+}
+.separator {
+  position: absolute;
+  width: 2px;
+  height: 75%;
+  background-color: #ccc;
+  top: 0.5rem;
+  right: 0;
+}

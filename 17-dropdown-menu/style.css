@@ -13,6 +13,9 @@ html {
 .main-container {
   margin: 5rem 10rem;
 }
+.active {
+  background-color: #e1ec94;
+}
 .navigation-bar {
   display: flex;
   align-items: center;
@@ -37,18 +40,21 @@ html {
   color: #111;
   font-size: 1.8rem;
   font-weight: 600;
-  background-color: red;
   padding: 10px 16px;
   display: flex;
   align-items: center;
   gap: 1rem;
   border-radius: 12px;
 }
+
 .search-box {
   display: flex;
   align-items: center;
   padding-right: 2.4rem;
   position: relative;
+}
+.search {
+  font-size: 2.4rem;
 }
 .separator {
   position: absolute;
@@ -56,5 +62,17 @@ html {
   height: 75%;
   background-color: #ccc;
   top: 0.5rem;
-  right: 0;
+  right: -1rem;
+}
+.norm-link {
+  transition: all 0.3s ease-out;
+}
+.norm-link:hover {
+  background-color: #e1ec94;
+}
+.down-arrow {
+  transition: all 0.4s ease;
+}
+.drop-down:hover .down-arrow {
+  transform: rotate(180deg);
 }

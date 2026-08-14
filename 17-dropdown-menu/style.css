@@ -12,6 +12,7 @@ html {
 }
 .main-container {
   margin: 5rem 10rem;
+  position: relative;
 }
 .active {
   background-color: #e1ec94;
@@ -24,6 +25,7 @@ html {
   padding: 2.4rem 5rem;
   box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
   border-radius: 16px;
+  
 }
 .logo-box {
   font-size: 2.6rem;
@@ -56,10 +58,10 @@ html {
 .search {
   font-size: 2.4rem;
   cursor: pointer;
-  transition: color .3s ease-out;
+  transition: color 0.3s ease-out;
 }
-.search:hover{
-    color: #555;
+.search:hover {
+  color: #333;
 }
 .separator {
   position: absolute;
@@ -81,18 +83,49 @@ html {
 .drop-down:hover .down-arrow {
   transform: rotate(180deg);
 }
-.start-icon{
-    transition: all .3s ease;
+.start-icon {
+  transition: all 0.3s ease;
 }
-.start-btn:hover .start-icon{
-    transform: translateX(4px);
-    t
+.start-btn:hover .start-icon {
+  transform: translateX(4px);
 }
-.start-btn{
-    padding-right: 20px !important;
-    transition: all .3s ease-in-out;
+.start-btn {
+  padding-right: 25px !important;
+  transition: all 0.3s ease-in-out;
 }
-.start-btn:hover{
-    transform: translateY(-1px);
-    box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.1);
+.start-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.1);
+}
+.drop-down-box {
+  position: absolute;
+  top: 8rem;
+  left: 35rem;
+  padding: 2rem 2rem;
+  border-radius: 12px;
+  
+  z-index: 1000;
+
+  box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.1);
+}
+.drop-box {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+.drop-link {
+  text-decoration: none;
+  color: #111;
+  font-size: 1.8rem;
+  font-weight: 600;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 12px;
+  transition: all .3s ease-in-out;
+}
+.drop-link:hover {
+  background-color: #e1ec94;
 }

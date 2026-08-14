@@ -17,6 +17,9 @@ html {
 .active {
   background-color: #e1ec94;
 }
+.hidden {
+  opacity: 0;
+}
 .navigation-bar {
   display: flex;
   align-items: center;
@@ -25,7 +28,6 @@ html {
   padding: 2.4rem 5rem;
   box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
   border-radius: 16px;
-  
 }
 .logo-box {
   font-size: 2.6rem;
@@ -99,14 +101,23 @@ html {
 }
 .drop-down-box {
   position: absolute;
-  top: 8rem;
+  top: 10rem;
   left: 35rem;
   padding: 2rem 2rem;
   border-radius: 12px;
-  
+
+  /* opacity: 0;
+  visibility: hidden;
+  pointer-events: none; */
+
   z-index: 1000;
 
   box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.1);
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease,
+    visibility 0.25s ease;
 }
 .drop-box {
   list-style: none;
@@ -124,8 +135,13 @@ html {
   align-items: center;
   gap: 1rem;
   border-radius: 12px;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .drop-link:hover {
   background-color: #e1ec94;
+}
+
+.drop-down-show-box:hover .drop-down-box {
+  opacity: 1;
+  visibility: visible;
 }

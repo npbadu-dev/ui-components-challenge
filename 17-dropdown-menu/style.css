@@ -55,6 +55,11 @@ html {
 }
 .search {
   font-size: 2.4rem;
+  cursor: pointer;
+  transition: color .3s ease-out;
+}
+.search:hover{
+    color: #555;
 }
 .separator {
   position: absolute;
@@ -75,4 +80,19 @@ html {
 }
 .drop-down:hover .down-arrow {
   transform: rotate(180deg);
+}
+.start-icon{
+    transition: all .3s ease;
+}
+.start-btn:hover .start-icon{
+    transform: translateX(4px);
+    t
+}
+.start-btn{
+    padding-right: 20px !important;
+    transition: all .3s ease-in-out;
+}
+.start-btn:hover{
+    transform: translateY(-1px);
+    box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.1);
 }

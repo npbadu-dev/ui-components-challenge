@@ -122,7 +122,7 @@ const components = [
     slug: "dropdown-menu",
     title: "Dropdown Menu",
     desc: "Click-triggered menu with full keyboard navigation.",
-    built: false,
+    built: true,
   },
   {
     day: 18,

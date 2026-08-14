@@ -82,7 +82,7 @@ html {
 .down-arrow {
   transition: all 0.4s ease;
 }
-.drop-down:hover .down-arrow {
+.drop-down-show-box:hover .down-arrow {
   transform: rotate(180deg);
 }
 .start-icon {
@@ -101,14 +101,14 @@ html {
 }
 .drop-down-box {
   position: absolute;
-  top: 10rem;
-  left: 35rem;
+  top: 100%;
+  left: 0;
   padding: 2rem 2rem;
   border-radius: 12px;
 
-  /* opacity: 0;
+  opacity: 0;
   visibility: hidden;
-  pointer-events: none; */
+  pointer-events: none;
 
   z-index: 1000;
 
@@ -136,12 +136,18 @@ html {
   gap: 1rem;
   border-radius: 12px;
   transition: all 0.3s ease-in-out;
+  white-space: nowrap;
 }
 .drop-link:hover {
   background-color: #e1ec94;
 }
 
+.drop-down-show-box {
+  position: relative;
+}
+
 .drop-down-show-box:hover .drop-down-box {
   opacity: 1;
   visibility: visible;
+  pointer-events: auto;
 }

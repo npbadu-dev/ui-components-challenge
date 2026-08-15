@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Courier New", Courier, monospace;
+  background-color: #fff;
+}
+html {
+  font-size: 62.5%;
+}
+.main-container {
+  margin: 20rem 10rem;
+  font-size: 2rem;
+}

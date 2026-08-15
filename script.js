@@ -129,7 +129,7 @@ const components = [
     slug: "breadcrumb-navigation",
     title: "Breadcrumb Navigation",
     desc: "Path trail showing current location in a hierarchy.",
-    built: false,
+    built: true,
   },
   {
     day: 19,

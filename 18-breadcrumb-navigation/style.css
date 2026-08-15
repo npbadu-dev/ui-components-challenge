@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Courier New", Courier, monospace;
+  background-color: #fffefd;
+}
+html {
+  font-size: 62.5%;
+}
+.main-container {
+  margin: 10rem;
+}
+.nav-bar {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  font-size: 1.8rem;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+  padding: 2.2rem 4.2rem;
+}
+.el {
+  cursor: pointer;
+  display: flex;
+  gap: 2rem;
+}
+.el span {
+  padding-right: 2rem;
+}
+.active {
+  color: #9aae02;
+  transition: color 0.3s ease-out;
+}
+.active:hover {
+  color: #6d781a;
+}
+.light-grey {
+  color: #ccc;
+  transition: color 0.3s ease-out;
+}
+.light-grey:hover {
+  color: #777;
+}
+.grey {
+  color: #777;
+  transition: color 0.3s ease-out;
+}
+.grey:hover {
+  color: #333;
+}
+.current {
+  color: #111;
+  font-weight: 600;
+  transition: color 0.3s ease-out;
+}
+.current:hover {
+  color: #777;
+}

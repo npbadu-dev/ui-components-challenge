@@ -1,0 +1,649 @@
+/* =================================
+   RESET
+================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =================================
+   BODY
+================================= */
+
+body {
+  min-height: 100vh;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  background: #efffa3;
+
+  color: #1f2933;
+}
+
+/* =================================
+   PAGE
+================================= */
+
+.page {
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 40px 20px;
+}
+
+/* =================================
+   TABS CONTAINER
+================================= */
+
+.tabs-container {
+  /* width: 100%; */
+  max-width: 1000px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+
+  /* overflow: hidden; */
+}
+
+/* =================================
+   TAB NAVIGATION
+================================= */
+
+.tabs-nav {
+  display: flex;
+  align-items: center;
+
+  padding: 0 30px;
+
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* =================================
+   TAB
+================================= */
+
+.tab {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  min-width: 150px;
+
+  padding: 20px 15px;
+
+  border: none;
+
+  background: transparent;
+
+  color: #6b7280;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    color 0.25s ease,
+    background-color 0.25s ease;
+}
+
+/* =================================
+   TAB ICON
+================================= */
+
+.tab-icon {
+  font-size: 20px;
+}
+
+/* =================================
+   TAB HOVER
+================================= */
+
+.tab:hover {
+  color: #6b7f00;
+}
+
+/* =================================
+   ACTIVE TAB
+================================= */
+
+.tab.active {
+  color: #6b7f00;
+}
+
+/* =================================
+   UNDERLINE
+================================= */
+
+.tab.active::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: -1px;
+
+  height: 3px;
+
+  background: #6b7f00;
+}
+
+/* =================================
+   CONTENT
+================================= */
+
+.tabs-content {
+  padding: 45px;
+}
+
+/* =================================
+   TAB PANEL
+================================= */
+
+.tab-panel {
+  display: none;
+}
+
+.tab-panel.active {
+  display: block;
+
+  animation: fadeIn 0.25s ease;
+}
+
+/* =================================
+   PANEL ANIMATION
+================================= */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =================================
+   PANEL HEADER
+================================= */
+
+.panel-header {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 25px;
+
+  margin-bottom: 35px;
+}
+
+/* =================================
+   PANEL ICON
+================================= */
+
+.panel-icon {
+  width: 70px;
+  height: 70px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #f5fbd5;
+
+  color: #6b7f00;
+
+  font-size: 32px;
+}
+
+/* =================================
+   HEADINGS
+================================= */
+
+.panel-header h2 {
+  margin-bottom: 10px;
+
+  font-size: 28px;
+
+  color: #20252b;
+}
+
+/* =================================
+   PARAGRAPH
+================================= */
+
+.panel-header p {
+  max-width: 650px;
+
+  color: #6b7280;
+
+  line-height: 1.7;
+
+  font-size: 16px;
+}
+
+/* =================================
+   STATISTICS
+================================= */
+
+.stats {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 20px;
+}
+
+.stat-card {
+  padding: 25px;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 12px;
+
+  background: #fafafa;
+}
+
+.stat-number {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #6b7f00;
+
+  font-size: 30px;
+
+  font-weight: 700;
+}
+
+.stat-label {
+  color: #6b7280;
+
+  font-size: 14px;
+}
+
+/* =================================
+   PROFILE
+================================= */
+
+.profile-info {
+  display: flex;
+  align-items: center;
+
+  gap: 25px;
+
+  margin-bottom: 30px;
+
+  padding: 25px;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 12px;
+}
+
+/* =================================
+   PROFILE AVATAR
+================================= */
+
+.profile-avatar {
+  width: 80px;
+  height: 80px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #e9f58b;
+
+  color: #566500;
+
+  font-size: 30px;
+
+  font-weight: 700;
+}
+
+/* =================================
+   PROFILE DETAILS
+================================= */
+
+.profile-details {
+  width: 100%;
+}
+
+.info-row {
+  display: flex;
+
+  justify-content: space-between;
+
+  padding: 10px 0;
+
+  border-bottom: 1px solid #eeeeee;
+}
+
+.info-row:last-child {
+  border-bottom: none;
+}
+
+.info-label {
+  color: #777;
+}
+
+.info-value {
+  font-weight: 600;
+}
+
+/* =================================
+   PRIMARY BUTTON
+================================= */
+
+.primary-button {
+  padding: 13px 24px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #6b7f00;
+
+  color: white;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.primary-button:hover {
+  background: #586900;
+
+  transform: translateY(-2px);
+}
+
+/* =================================
+   MESSAGES
+================================= */
+
+.messages-list {
+  margin-bottom: 25px;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 12px;
+
+  overflow: hidden;
+}
+
+.message {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 20px;
+
+  border-bottom: 1px solid #eeeeee;
+}
+
+.message:last-child {
+  border-bottom: none;
+}
+
+/* =================================
+   MESSAGE AVATAR
+================================= */
+
+.message-avatar {
+  width: 45px;
+  height: 45px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #f5fbd5;
+
+  color: #6b7f00;
+
+  font-weight: 700;
+}
+
+/* =================================
+   MESSAGE CONTENT
+================================= */
+
+.message-content {
+  width: 100%;
+}
+
+.message-top {
+  display: flex;
+
+  justify-content: space-between;
+
+  margin-bottom: 5px;
+}
+
+.message-top strong {
+  color: #20252b;
+}
+
+.message-top span {
+  color: #999;
+
+  font-size: 13px;
+}
+
+.message-content p {
+  color: #6b7280;
+
+  font-size: 14px;
+}
+
+/* =================================
+   SETTINGS
+================================= */
+
+.settings-list {
+  margin-bottom: 30px;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 12px;
+
+  overflow: hidden;
+}
+
+.setting {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 20px;
+
+  border-bottom: 1px solid #eeeeee;
+}
+
+.setting:last-child {
+  border-bottom: none;
+}
+
+.setting h3 {
+  margin-bottom: 5px;
+
+  font-size: 16px;
+}
+
+.setting p {
+  color: #777;
+
+  font-size: 14px;
+}
+
+/* =================================
+   TOGGLE SWITCH
+================================= */
+
+.switch {
+  position: relative;
+
+  width: 48px;
+  height: 26px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+
+  inset: 0;
+
+  border-radius: 20px;
+
+  background: #d1d5db;
+
+  cursor: pointer;
+
+  transition: 0.25s;
+}
+
+.slider::before {
+  content: "";
+
+  position: absolute;
+
+  width: 20px;
+  height: 20px;
+
+  left: 3px;
+  top: 3px;
+
+  border-radius: 50%;
+
+  background: white;
+
+  transition: 0.25s;
+}
+
+.switch input:checked + .slider {
+  background: #6b7f00;
+}
+
+.switch input:checked + .slider::before {
+  transform: translateX(22px);
+}
+
+/* =================================
+   ARROW BUTTON
+================================= */
+
+.arrow-button {
+  border: none;
+
+  background: transparent;
+
+  color: #6b7f00;
+
+  font-size: 24px;
+
+  cursor: pointer;
+}
+
+/* =================================
+   RESPONSIVE
+================================= */
+
+@media (max-width: 700px) {
+  .page {
+    padding: 20px 10px;
+  }
+
+  .tabs-nav {
+    padding: 0 10px;
+
+    overflow-x: auto;
+  }
+
+  .tab {
+    min-width: 120px;
+
+    padding: 18px 10px;
+  }
+
+  .tabs-content {
+    padding: 30px 20px;
+  }
+
+  .panel-header {
+    gap: 15px;
+  }
+
+  .panel-icon {
+    width: 55px;
+    height: 55px;
+
+    font-size: 25px;
+  }
+
+  .panel-header h2 {
+    font-size: 23px;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-info {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .info-row {
+    flex-direction: column;
+
+    gap: 5px;
+  }
+
+  .message {
+    align-items: flex-start;
+  }
+
+  .message-top {
+    flex-direction: column;
+
+    gap: 3px;
+  }
+}

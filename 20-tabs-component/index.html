@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>PixelFit - Tabs Component</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <main class="page">
+      <section class="tabs-container">
+        <!-- ==============================
+           TAB NAVIGATION
+      =============================== -->
+        <div class="tabs-nav">
+          <button class="tab active" data-tab="home">
+            <i class="fa-solid fa-house"></i>
+            <span>Home</span>
+          </button>
+
+          <button class="tab" data-tab="profile">
+            <i class="fa-solid fa-user"></i>
+            <span>Profile</span>
+          </button>
+
+          <button class="tab" data-tab="messages">
+            <i class="fa-solid fa-message"></i>
+            <span>Messages</span>
+          </button>
+
+          <button class="tab" data-tab="settings">
+            <i class="fa-solid fa-gear"></i>
+            <span>Settings</span>
+          </button>
+        </div>
+
+        <!-- ==============================
+           TAB CONTENT
+      =============================== -->
+        <div class="tabs-content">
+          <!-- ==============================
+             HOME
+        =============================== -->
+          <div class="tab-panel active" data-content="home">
+            <div class="panel-header">
+              <div class="panel-icon"><i class="fa-solid fa-house"></i></div>
+
+              <div>
+                <h2>Welcome Home!</h2>
+
+                <p>
+                  This is your home dashboard. Here you can find an overview of
+                  your recent activity, important updates, and quick actions.
+                </p>
+              </div>
+            </div>
+
+            <!-- Statistics -->
+            <div class="stats">
+              <div class="stat-card">
+                <span class="stat-number">24</span>
+                <span class="stat-label">Activities</span>
+              </div>
+
+              <div class="stat-card">
+                <span class="stat-number">12</span>
+                <span class="stat-label">Notifications</span>
+              </div>
+
+              <div class="stat-card">
+                <span class="stat-number">8</span>
+                <span class="stat-label">Tasks</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ==============================
+             PROFILE
+        =============================== -->
+          <div class="tab-panel" data-content="profile">
+            <div class="panel-header">
+              <div class="panel-icon"><i class="fa-solid fa-user"></i></div>
+
+              <div>
+                <h2>Your Profile</h2>
+
+                <p>
+                  Manage your personal information, profile picture, and account
+                  preferences.
+                </p>
+              </div>
+            </div>
+
+            <div class="profile-info">
+              <div class="profile-avatar">N</div>
+
+              <div class="profile-details">
+                <div class="info-row">
+                  <span class="info-label">Name</span>
+                  <span class="info-value">Nitesh Badu</span>
+                </div>
+
+                <div class="info-row">
+                  <span class="info-label">Email</span>
+                  <span class="info-value">nitesh@example.com</span>
+                </div>
+
+                <div class="info-row">
+                  <span class="info-label">Location</span>
+                  <span class="info-value">Kathmandu, Nepal</span>
+                </div>
+              </div>
+            </div>
+
+            <button class="primary-button">Edit Profile</button>
+          </div>
+
+          <!-- ==============================
+             MESSAGES
+        =============================== -->
+          <div class="tab-panel" data-content="messages">
+            <div class="panel-header">
+              <div class="panel-icon"><i class="fa-solid fa-message"></i></div>
+
+              <div>
+                <h2>Your Messages</h2>
+
+                <p>
+                  Check your conversations, replies, and important messages from
+                  your contacts.
+                </p>
+              </div>
+            </div>
+
+            <div class="messages-list">
+              <div class="message">
+                <div class="message-avatar">A</div>
+
+                <div class="message-content">
+                  <div class="message-top">
+                    <strong>Alex Johnson</strong>
+                    <span>10:32 AM</span>
+                  </div>
+
+                  <p>Hey! Are you available for a quick meeting?</p>
+                </div>
+              </div>
+
+              <div class="message">
+                <div class="message-avatar">S</div>
+
+                <div class="message-content">
+                  <div class="message-top">
+                    <strong>Sarah Williams</strong>
+                    <span>09:15 AM</span>
+                  </div>
+
+                  <p>The project update looks great!</p>
+                </div>
+              </div>
+
+              <div class="message">
+                <div class="message-avatar">M</div>
+
+                <div class="message-content">
+                  <div class="message-top">
+                    <strong>Mike Davis</strong>
+                    <span>Yesterday</span>
+                  </div>
+
+                  <p>I've sent you the latest files.</p>
+                </div>
+              </div>
+            </div>
+
+            <button class="primary-button">View All Messages</button>
+          </div>
+
+          <!-- ==============================
+             SETTINGS
+        =============================== -->
+          <div class="tab-panel" data-content="settings">
+            <div class="panel-header">
+              <div class="panel-icon"><i class="fa-solid fa-gear"></i></div>
+
+              <div>
+                <h2>Account Settings</h2>
+
+                <p>
+                  Update your account settings, manage privacy, and configure
+                  your preferences.
+                </p>
+              </div>
+            </div>
+
+            <div class="settings-list">
+              <div class="setting">
+                <div>
+                  <h3>Notifications</h3>
+
+                  <p>Receive email notifications</p>
+                </div>
+
+                <label class="switch">
+                  <input type="checkbox" checked />
+
+                  <span class="slider"></span>
+                </label>
+              </div>
+
+              <div class="setting">
+                <div>
+                  <h3>Dark Mode</h3>
+
+                  <p>Switch between light and dark mode</p>
+                </div>
+
+                <label class="switch">
+                  <input type="checkbox" />
+
+                  <span class="slider"></span>
+                </label>
+              </div>
+
+              <div class="setting">
+                <div>
+                  <h3>Privacy</h3>
+
+                  <p>Manage your privacy preferences</p>
+                </div>
+
+                <button class="arrow-button">→</button>
+              </div>
+            </div>
+
+            <button class="primary-button">Save Changes</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

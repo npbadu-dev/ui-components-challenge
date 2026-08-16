@@ -136,7 +136,7 @@ const components = [
     slug: "pagination",
     title: "Pagination",
     desc: "Page number controls with prev, next, and ellipsis states.",
-    built: false,
+    built: true,
   },
   {
     day: 20,

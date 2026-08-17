@@ -180,3 +180,87 @@ html {
   border-bottom-right-radius: 22px;
   box-shadow: -5px 5px 10px 10px rgba(0, 0, 0, 0.2);
 }
+/* ************************** */
+/* Modal UI component */
+/* ***************************** */
+
+.main-site {
+  opacity: 0.1;
+}
+.modal-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.popup-container {
+  background: #fff;
+  padding: 2rem 3rem;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.popup-row1 {
+  display: flex;
+  gap: 3rem;
+}
+.icon-box-ro1 {
+  font-size: 2.6rem;
+  color: #6d830e;
+  background-color: #f6f7ec;
+  padding: 14px;
+  border-radius: 50%;
+
+  height: 54px;
+  width: 54px;
+  text-align: center;
+}
+.heading {
+  font-size: 2.2rem;
+  font-weight: 550;
+  margin-bottom: 0.6rem;
+}
+.sub-heading {
+  color: #777;
+  font-size: 1.2rem;
+  margin-bottom: 1.4rem;
+}
+.btn-container {
+  display: flex;
+  gap: 1.6rem;
+}
+.btn-pop {
+  border: 1px solid #6d830e;
+  border-radius: 8px;
+  padding: 10px 16px;
+  background-color: #fff;
+  color: #6d830e;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  transition: all 0.3s ease-out;
+}
+.btn-pop:hover {
+  background-color: #6d830e;
+  color: #fff;
+}
+.continue-shop {
+  border: 1px solid #6d830e;
+  border-radius: 8px;
+  padding: 10px 16px;
+  background-color: #6d830e;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  transition: all 0.3s ease-out;
+}
+.continue-shop:hover{
+  background-color: #fff;
+  color: #6d830e;
+}

@@ -204,6 +204,8 @@ html {
 .popup-row1 {
   display: flex;
   gap: 3rem;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 3rem;
 }
 .icon-box-ro1 {
   font-size: 2.6rem;
@@ -260,7 +262,42 @@ html {
   gap: 1rem;
   transition: all 0.3s ease-out;
 }
-.continue-shop:hover{
-  background-color: #fff;
-  color: #6d830e;
+.continue-shop:hover {
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+.popup-row2 {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 3rem;
+}
+.ro2-heading {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 1.4rem;
+}
+.ro2-card-item {
+  display: flex;
+  gap: 1.4rem;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  background-color: #eae8e7;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  align-items: center;
+  width: 230px;
+}
+.product-img {
+  height: 200px;
+}
+.title-heading{
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.price{
+  color: #777;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
 }

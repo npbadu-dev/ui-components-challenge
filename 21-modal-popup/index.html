@@ -55,9 +55,9 @@
               every day.
             </p>
             <div class="btn-box">
-              <a href="#" class="btn btn-shop"
-                ><span>Shop Now</span> <i class="fa-solid fa-arrow-right"></i
-              ></a>
+              <button type="button" class="btn btn-shop" id="openModalBtn">
+                <span>Shop Now</span> <i class="fa-solid fa-arrow-right"></i>
+              </button>
               <a href="#" class="btn btn-collection">Explore Collections</a>
             </div>
             <div class="feature-box">
@@ -98,77 +98,103 @@
     </div>
     <!-- modal -->
 
-    <div class="modal-box">
-      <div class="popup-container">
-        <div class="popup-row1">
-          <div class="icon-box-ro1">
-            <i class="fa-regular fa-circle-check"></i>
-          </div>
-          <div class="text-box-ro1">
-            <p class="heading">Added to Cart!</p>
-            <p class="sub-heading">Nike Flex Runner has been added to your cart.</p>
-            <div class="btn-container">
-              <button class="add-to-cart btn-pop">
-                <i class="fa-solid fa-cart-shopping"></i>
-                <span>View Cart (2)</span>
-              </button>
-              <button class="continue-shop">Continue Shopping</button>
+    <div class="modal-overlay" id="modalOverlay" aria-hidden="true">
+      <div
+        class="modal-box"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modalTitle"
+      >
+        <button type="button" class="close-modal" aria-label="Close popup">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="popup-container">
+          <div class="popup-row1">
+            <div class="icon-box-ro1">
+              <i class="fa-regular fa-circle-check"></i>
             </div>
-          </div>
-        </div>
-        <div class="popup-row2">
-          <p class="ro2-heading">You might also like</p>
-          <div class="ro2-card-item">
-            <div class="card">
-              <img src="assests/bag.png" alt="Duffle bag" class="product-img">
-              <p class="title-heading">Gym Duffle bag</p>
-              <p class="price">$39.99</p>
-              <button class="add-to-cart btn-pop">
-                <i class="fa-solid fa-cart-shopping"></i>
-                <span>Add to Cart</span>
-              </button>
-            </div>
-            <div class="card">
-              <img src="assests/bottle.png" alt="steel bottle" class="product-img">
-              <p class="title-heading">Stainless Steel bottle</p>
-              <p class="price">$24.59</p>
-              <button class="add-to-cart btn-pop">
-                <i class="fa-solid fa-cart-shopping"></i>
-                <span>Add to Cart</span>
-              </button>
-            </div>
-            <div class="card">
-              <img src="assests/watch.png" alt="fit-track watch" class="product-img">
-              <p class="title-heading">FitTrack Pro</p>
-              <p class="price">$89.99</p>
-              <button class="add-to-cart btn-pop">
-                <i class="fa-solid fa-cart-shopping"></i>
-                <span>Add to Cart</span>
-              </button>
-            </div>
-          </div>
-        </div>
-        <div class="popup-row3">
-          <div class="pop-feature-card">
-            <div class="f-card">
-              <div class="f-icon-box"><i class="fa-solid fa-truck"></i></div>
-              <div class="f-text-box">
-                <p class="f-heading">Free Delivery</p>
-                <p class="f-desc">On order over $50</p>
+            <div class="text-box-ro1">
+              <p class="heading" id="modalTitle">Added to Cart!</p>
+              <p class="sub-heading">
+                Nike Flex Runner has been added to your cart.
+              </p>
+              <div class="btn-container">
+                <button class="add-to-cart btn-pop" type="button">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                  <span>View Cart (2)</span>
+                </button>
+                <button class="continue-shop" type="button">
+                  Continue Shopping
+                </button>
               </div>
             </div>
-            <div class="f-card">
-              <div class="f-icon-box"><i class="fa-solid fa-shield"></i></div>
-              <div class="f-text-box">
-                <p class="f-heading">Secure Payment</p>
-                <p class="f-desc">100% secure checkout</p>
+          </div>
+          <div class="popup-row2">
+            <p class="ro2-heading">You might also like</p>
+            <div class="ro2-card-item">
+              <div class="card">
+                <img
+                  src="assests/bag.png"
+                  alt="Duffle bag"
+                  class="product-img"
+                />
+                <p class="title-heading">Gym Duffle bag</p>
+                <p class="price">$39.99</p>
+                <button class="add-to-cart btn-pop" type="button">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                  <span>Add to Cart</span>
+                </button>
+              </div>
+              <div class="card">
+                <img
+                  src="assests/bottle.png"
+                  alt="steel bottle"
+                  class="product-img"
+                />
+                <p class="title-heading">Stainless Steel bottle</p>
+                <p class="price">$24.59</p>
+                <button class="add-to-cart btn-pop" type="button">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                  <span>Add to Cart</span>
+                </button>
+              </div>
+              <div class="card">
+                <img
+                  src="assests/watch.png"
+                  alt="fit-track watch"
+                  class="product-img"
+                />
+                <p class="title-heading">FitTrack Pro</p>
+                <p class="price">$89.99</p>
+                <button class="add-to-cart btn-pop" type="button">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                  <span>Add to Cart</span>
+                </button>
               </div>
             </div>
-            <div class="f-card">
-              <div class="f-icon-box"><i class="fa-solid fa-rotate"></i></div>
-              <div class="f-text-box">
-                <p class="f-heading">Easy Returns</p>
-                <p class="f-desc">30-day return policy</p>
+          </div>
+          <div class="popup-row3">
+            <div class="pop-feature-card">
+              <div class="f-card">
+                <div class="f-icon-box"><i class="fa-solid fa-truck"></i></div>
+                <div class="f-text-box">
+                  <p class="f-heading">Free Delivery</p>
+                  <p class="f-desc">On order over $50</p>
+                </div>
+              </div>
+              <div class="f-card">
+                <div class="f-icon-box"><i class="fa-solid fa-shield"></i></div>
+                <div class="f-text-box">
+                  <p class="f-heading">Secure Payment</p>
+                  <p class="f-desc">100% secure checkout</p>
+                </div>
+              </div>
+              <div class="f-card">
+                <div class="f-icon-box"><i class="fa-solid fa-rotate"></i></div>
+                <div class="f-text-box">
+                  <p class="f-heading">Easy Returns</p>
+                  <p class="f-desc">30-day return policy</p>
+                </div>
               </div>
             </div>
           </div>

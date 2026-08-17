@@ -185,13 +185,35 @@ html {
 /* ***************************** */
 
 .main-site {
-  opacity: 0.1;
+  opacity: 1;
+}
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(17, 17, 17, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.25s ease,
+    visibility 0.25s ease;
+  z-index: 1000;
+}
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
 }
 .modal-box {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
+  width: min(100%, 980px);
+  transform: translateY(10px);
+  transition: transform 0.25s ease;
+}
+.modal-overlay.active .modal-box {
+  transform: translateY(0);
 }
 .popup-container {
   background: #fff;
@@ -200,6 +222,28 @@ html {
   display: flex;
   flex-direction: column;
   gap: 3rem;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.2);
+}
+.close-modal {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  background: #f2f2f2;
+  color: #333;
+  font-size: 1.6rem;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: all 0.2s ease;
+  z-index: 2;
+}
+.close-modal:hover {
+  background: #e9e9e9;
+  transform: rotate(90deg);
 }
 .popup-row1 {
   display: flex;
@@ -276,6 +320,8 @@ html {
 }
 .ro2-card-item {
   display: flex;
+  align-items: center;
+  justify-content:  center;
   gap: 1.4rem;
 }
 .card {
@@ -291,30 +337,30 @@ html {
 .product-img {
   height: 200px;
 }
-.title-heading{
+.title-heading {
   font-size: 1.4rem;
   font-weight: 600;
 }
-.price{
+.price {
   color: #777;
   font-size: 1.2rem;
   font-weight: 600;
   margin-bottom: 1rem;
 }
-.popup-row3{
+.popup-row3 {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.pop-feature-card{
+.pop-feature-card {
   display: flex;
   gap: 5rem;
 }
-.f-card{
+.f-card {
   display: flex;
   gap: 1rem;
 }
-.f-icon-box{
+.f-icon-box {
   color: #6d830e;
   font-size: 1.6rem;
   background-color: #f6f7ec;
@@ -324,11 +370,11 @@ html {
   align-items: center;
   justify-content: center;
 }
-.f-heading{
+.f-heading {
   font-size: 1.2rem;
   font-weight: 600;
 }
-.f-desc{
+.f-desc {
   color: #777;
-  margin-top: .4rem;
+  margin-top: 0.4rem;
 }

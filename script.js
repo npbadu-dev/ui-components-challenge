@@ -143,7 +143,7 @@ const components = [
     slug: "tabs-component",
     title: "Tabs Component",
     desc: "Switchable content panels with an animated active indicator.",
-    built: false,
+    built: true,
   },
   {
     day: 21,

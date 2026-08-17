@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modal Popup</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="main-site">
+      <header>
+        <nav>
+          <ul class="navigation-box">
+            <div class="logo-box">
+              <li>
+                <a href="#" class="nav-link logo-name">PixelFit</a>
+              </li>
+            </div>
+            <div class="nav-link-box">
+              <li><a href="#" class="nav-link">Home</a></li>
+              <li><a href="#" class="nav-link">Products</a></li>
+              <li><a href="#" class="nav-link">About Us</a></li>
+              <li><a href="#" class="nav-link">Contacts</a></li>
+              <li>
+                <div class="search-box">
+                  <div class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                  </div>
+                  <div class="search-placeholder">
+                    <input
+                      type="text"
+                      placeholder="Search your Products"
+                      class="search-text"
+                    />
+                  </div>
+                </div>
+              </li>
+            </div>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <div class="hero-section">
+          <div class="text-container">
+            <h1 class="hero-heading">
+              Elevate Your Fitness
+              <span>Journey</span>
+            </h1>
+            <p class="description">
+              Premium quality fitness gear designed to help you perform better,
+              every day.
+            </p>
+            <div class="btn-box">
+              <a href="#" class="btn btn-shop"
+                ><span>Shop Now</span> <i class="fa-solid fa-arrow-right"></i
+              ></a>
+              <a href="#" class="btn btn-collection">Explore Collections</a>
+            </div>
+            <div class="feature-box">
+              <div class="feature">
+                <div class="feature-icon">
+                  <i class="fa-solid fa-shield"></i>
+                </div>
+                <div class="feature-context">
+                  <p class="feature-heading">Premium Quality</p>
+                  <p class="feature-description">Built to last</p>
+                </div>
+              </div>
+              <div class="feature">
+                <div class="feature-icon">
+                  <i class="fa-solid fa-truck-fast"></i>
+                </div>
+                <div class="feature-context">
+                  <p class="feature-heading">Fast Delivery</p>
+                  <p class="feature-description">Within 2-4 days</p>
+                </div>
+              </div>
+              <div class="feature">
+                <div class="feature-icon">
+                  <i class="fa-solid fa-arrows-rotate"></i>
+                </div>
+                <div class="feature-context">
+                  <p class="feature-heading">Easy Returns</p>
+                  <p class="feature-description">30-Day Return</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="illustration-container">
+            <img src="assests/hero-img.png" alt="hero image" class="hero-img" />
+          </div>
+        </div>
+      </main>
+    </div>
+    <!-- modal -->
+
+    <div class="modal-box">
+      <div class="popup-container">
+        <div class="popup-row1">
+          <div class="icon-box-ro1">
+            <i class="fa-regular fa-circle-check"></i>
+          </div>
+          <div class="text-box-ro1">
+            <p class="heading">Added to Cart!</p>
+            <p class="sub-heading">Nike Flex Runner has been added to your cart.</p>
+            <div class="btn-container"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

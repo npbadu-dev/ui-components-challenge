@@ -301,3 +301,34 @@ html {
   font-weight: 600;
   margin-bottom: 1rem;
 }
+.popup-row3{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pop-feature-card{
+  display: flex;
+  gap: 5rem;
+}
+.f-card{
+  display: flex;
+  gap: 1rem;
+}
+.f-icon-box{
+  color: #6d830e;
+  font-size: 1.6rem;
+  background-color: #f6f7ec;
+  padding: 12px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.f-heading{
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.f-desc{
+  color: #777;
+  margin-top: .4rem;
+}

@@ -11,9 +11,74 @@ html {
   font-size: 62.5%;
   overflow-x: hidden;
 }
-.main-container{
+.main-container {
   margin: 9rem 15rem;
 }
-.rotate-excl{
+.rotate-excl {
   transform: rotate(180deg);
+}
+
+.container {
+  display: flex;
+  gap: 5rem;
+}
+.title {
+  font-size: 1.4rem;
+  color: #7b9431;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 1.4rem;
+}
+.heading,
+.sub-heading {
+  font-size: 3.8rem;
+  font-weight: 600;
+}
+.col-heading {
+  color: #6b860e;
+  margin-bottom: 1.2rem;
+}
+.desc {
+  color: #555;
+  font-size: 1.4rem;
+}
+.toast-card {
+  margin-top: 1.8rem;
+  margin-bottom: 2rem;
+  background-color: #fff;
+  padding: 2rem;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+}
+.card-heading {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+.card-desc {
+  color: #333;
+  font-size: 1.2rem;
+  margin-bottom: 1.6rem;
+}
+.btn-group{
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+.btn-row1 {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+}
+.btn {
+  padding: 12px 18px;
+  width: 150px;
+  background-color: transparent;
+  border-radius: 8px;
+  /* border: none; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.4rem;
+  font-size: 1.6rem;
 }

@@ -95,8 +95,16 @@ html {
   color: #92a56a;
   background-color: rgba(146, 165, 106, 0.1);
 }
+.success-box {
+  color: #92a56a;
+  background-color: rgba(146, 165, 106, 0.1);
+}
 .warn {
   box-shadow: 0 0 0 2px orange;
+  color: orange;
+  background-color: rgba(255, 166, 0, 0.1);
+}
+.warn-box {
   color: orange;
   background-color: rgba(255, 166, 0, 0.1);
 }
@@ -105,8 +113,16 @@ html {
   color: red;
   background-color: rgba(255, 0, 0, 0.1);
 }
+.error-box {
+  color: red;
+  background-color: rgba(255, 0, 0, 0.1);
+}
 .info {
   box-shadow: 0 0 0 2px blue;
+  color: blue;
+  background-color: rgba(0, 0, 255, 0.1);
+}
+.info-box {
   color: blue;
   background-color: rgba(0, 0, 255, 0.1);
 }
@@ -115,8 +131,16 @@ html {
   color: blueviolet;
   background-color: rgba(137, 43, 226, 0.1);
 }
+.promo-box {
+  color: blueviolet;
+  background-color: rgba(137, 43, 226, 0.1);
+}
 .custom {
   box-shadow: 0 0 0 2px #777;
+  color: #444;
+  background-color: rgba(119, 119, 119, 0.1);
+}
+.custom-box {
   color: #444;
   background-color: rgba(119, 119, 119, 0.1);
 }
@@ -214,7 +238,7 @@ html {
   --color: #8855d5;
   --progress: 92%;
 }
-.custom-card{
+.custom-card {
   --color: #777;
   --progress: 64%;
 }
@@ -225,13 +249,11 @@ html {
   margin-bottom: 0.8rem;
 }
 .right-card-desc {
-  columns: #777;
+  color: #555;
   font-size: 1.2rem;
 }
 .right-card-icon-box {
   font-size: 2.2rem;
-  color: #92a56a;
-  background-color: rgba(146, 165, 106, 0.1);
   padding: 12px;
   border-radius: 50%;
   display: flex;
@@ -244,4 +266,12 @@ html {
   right: 2.4rem;
   font-size: 1.8rem;
   color: #777;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+.fa-xmark:hover{
+  color: #333;
+}
+.fa-xmark:active{
+  transform: translateY(2px);
 }

@@ -5,9 +5,34 @@
 }
 body {
   font-family: "Courier New", Courier, monospace;
-  background-color: #fcf9ca;
+  background-color: #f7f8f1;
 }
 html {
   font-size: 62.5%;
   overflow-x: hidden;
+}
+.main-container {
+  margin: 10rem 30rem;
+  /* background-color: #fff; */
+}
+.text-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.title {
+  font-size: 1.4rem;
+  color: #8c9e42;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+.heading{
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-bottom: .6rem;
+}
+.desc{
+  font-size: 1.2rem;
+  color: #555;
 }

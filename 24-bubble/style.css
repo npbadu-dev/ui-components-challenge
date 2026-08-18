@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Courier New", Courier, monospace;
+  background-color: #1a1a1a;
+}
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+.main-container{
+  margin: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+.bubble-container{
+  box-shadow: 0 0 0 2px cornsilk;
+  padding: 5rem 10rem;
+  border-radius: 12px;
+}

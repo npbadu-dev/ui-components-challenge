@@ -46,7 +46,7 @@ html {
   margin-top: 1.8rem;
   margin-bottom: 2rem;
   background-color: #fff;
-  padding: 2rem;
+  padding: 2rem 4rem 3rem 2rem;
   box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.12);
   border-radius: 8px;
 }
@@ -58,9 +58,9 @@ html {
 .card-desc {
   color: #333;
   font-size: 1.2rem;
-  margin-bottom: 1.6rem;
+  margin-bottom: 2.2rem;
 }
-.btn-group{
+.btn-group {
   display: flex;
   flex-direction: column;
   gap: 1.8rem;
@@ -75,10 +75,48 @@ html {
   width: 150px;
   background-color: transparent;
   border-radius: 8px;
-  /* border: none; */
+  border: none;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1.4rem;
   font-size: 1.6rem;
+  cursor: pointer;
+  transition: all .2s ease-in;
+}
+.btn:hover{
+  transform: translateY(-2px);
+}
+.btn:active{
+  transform: translateY(2px);
+}
+.success {
+  box-shadow: 0 0 0 2px #92a56a;
+  color: #92a56a;
+  background-color: rgba(146, 165, 106, 0.1);
+}
+.warn {
+  box-shadow: 0 0 0 2px orange;
+  color: orange;
+  background-color: rgba(255, 166, 0, 0.1);
+}
+.error{
+  box-shadow: 0 0 0 2px red;
+  color: red;
+  background-color: rgba(255, 0, 0, 0.1);
+}
+.info{
+  box-shadow: 0 0 0 2px blue;
+  color: blue;
+  background-color: rgba(0, 0, 255, 0.1);
+}
+.promo{
+  box-shadow: 0 0 0 2px blueviolet;
+  color: blueviolet;
+  background-color: rgba(137, 43, 226, 0.1);
+}
+.custom{
+  box-shadow: 0 0 0 2px #777;
+  color: #444;
+  background-color: rgba(119, 119, 119, 0.1);
 }

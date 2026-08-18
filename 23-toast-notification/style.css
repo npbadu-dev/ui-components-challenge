@@ -5,9 +5,15 @@
 }
 body {
   font-family: "Courier New", Courier, monospace;
-  background-color: #fff9e0;
+  background-color: #f9f8f5;
 }
 html {
   font-size: 62.5%;
   overflow-x: hidden;
+}
+.main-container{
+  margin: 9rem 15rem;
+}
+.rotate-excl{
+  transform: rotate(180deg);
 }

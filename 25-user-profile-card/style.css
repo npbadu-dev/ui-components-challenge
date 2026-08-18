@@ -11,3 +11,14 @@ html {
   font-size: 62.5%;
   overflow-x: hidden;
 }
+.main-container{
+  margin-top: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.profile-img{
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+}

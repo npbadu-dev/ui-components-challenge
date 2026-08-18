@@ -74,8 +74,36 @@ html {
 .div1 {
   grid-column: 1;
   grid-row: 1/4;
+  position: relative;
 }
-.img1, .img2 {
+.icon {
+  position: absolute;
+  font-size: 1.8rem;
+  background-color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  padding: 8px 11px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.3s ease-out;
+  z-index: 1000;
+  cursor: pointer;
+}
+.left-icon {
+  left: 3rem;
+}
+.right-icon {
+  right: 3rem;
+}
+.icon:hover {
+  background-color: #777;
+  color: #fff;
+}
+.icon:active {
+  background-color: #ccc;
+}
+.img1,
+.img2 {
   transition: all 0.3s ease;
   cursor: pointer;
 }
@@ -84,9 +112,9 @@ html {
   overflow: hidden;
 }
 .div1:hover .img1 {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
-.div2:hover .img2{
+.div2:hover .img2 {
   transform: scale(1.1);
 }
 .img1 {

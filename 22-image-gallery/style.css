@@ -12,7 +12,7 @@ html {
   overflow-x: hidden;
 }
 .main-container {
-  margin: 10rem 30rem;
+  margin: 10rem 25rem;
   /* background-color: #fff; */
 }
 .text-row {
@@ -27,12 +27,39 @@ html {
   text-transform: uppercase;
   margin-bottom: 1rem;
 }
-.heading{
+.heading {
   font-size: 2.4rem;
   font-weight: 600;
-  margin-bottom: .6rem;
+  margin-bottom: 0.6rem;
 }
-.desc{
+.desc {
   font-size: 1.2rem;
   color: #555;
+}
+.nav-btn-box {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+.btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all .3s ease-out;
+}
+.btn:hover{
+  transform: translateY(-2px) scale(1.06);
+
+}
+.btn:active{
+  transform: translateY(2px) scale(1.02);
+}
+.all {
+  color: #f7f8f1;
+  background-color: #6f8610;
+}
+.norm {
+  background-color: transparent;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.1);
 }

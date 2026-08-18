@@ -161,16 +161,16 @@ const components = [
   },
   {
     day: 23,
-    slug: "dashboard-sidebar",
-    title: "Dashboard Sidebar",
-    desc: "App-shell navigation for a logged-in dashboard experience.",
+    slug: "date-picker",
+    title: "Date Picker",
+    desc: "Calendar-based date selection with validation.",
     built: false,
   },
   {
     day: 24,
-    slug: "dashboard-summary-cards",
-    title: "Dashboard Summary Cards",
-    desc: "KPI tiles with trend indicators.",
+    slug: "file-uploader",
+    title: "File Uploader",
+    desc: "Drag-and-drop file upload area with progress indicators.",
     built: false,
   },
   {

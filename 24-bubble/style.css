@@ -11,15 +11,91 @@ html {
   font-size: 62.5%;
   overflow-x: hidden;
 }
-.main-container{
+.main-container {
   margin: 8rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
 }
-.bubble-container{
+.bubble-container {
   box-shadow: 0 0 0 2px cornsilk;
   padding: 5rem 10rem;
   border-radius: 12px;
+  color: #fff;
+  font-size: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 700px;
+}
+.row1,
+.row3 {
+  display: flex;
+  justify-content: flex-end;
+}
+.row2 {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+.text-1 {
+  background-color: #272727;
+  padding: 12px 16px;
+  width: 290px;
+  border-radius: 20px;
+}
+.text-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  background-color: #272727;
+  padding: 12px 16px;
+  width: 420px;
+  border-radius: 20px;
+  position: relative;
+}
+.row4{
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+  background-color: #272727;
+  padding: 16px 20px;
+  width: 410px;
+  border-radius: 30px;
+  position: relative;
+  margin-bottom: 5rem;
+}
+.emoj-1{
+  position: absolute;
+  bottom: -17px;
+  right: 15px;
+  border: 4px solid #1a1a1a;
+  background-color: #272727;
+  padding: 3px 5px;
+  border-radius: 22px;
+}
+.emojy-box{
+  position: absolute;
+  display: flex;
+  gap: .6rem;
+  bottom: -17px;
+  right: 15px;
+  border: 4px solid #1a1a1a;
+  background-color: #272727;
+  padding: 3px 5px;
+  border-radius: 22px;
+}
+.row1 .text,
+.row3 .text {
+  background-color: #193cb8;
+  padding: 12px 16px;
+  border-radius: 20px;
+}
+.row3{
+  margin-top: 3rem;
+}
+span{
+  cursor: pointer;
 }

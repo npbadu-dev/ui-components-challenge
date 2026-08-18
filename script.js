@@ -161,16 +161,16 @@ const components = [
   },
   {
     day: 23,
-    slug: "date-picker",
-    title: "Date Picker",
-    desc: "Calendar-based date selection with validation.",
+    slug: "toast-notification",
+    title: "Toast Notification",
+    desc: "Non-modal alert with auto-dismiss and user interaction.",
     built: false,
   },
   {
     day: 24,
-    slug: "file-uploader",
-    title: "File Uploader",
-    desc: "Drag-and-drop file upload area with progress indicators.",
+    slug: "bubble",
+    title: "Bubble",
+    desc: "Displays conversational content in a message bubble",
     built: false,
   },
   {

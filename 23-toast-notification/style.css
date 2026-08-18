@@ -12,7 +12,7 @@ html {
   overflow-x: hidden;
 }
 .main-container {
-  margin: 9rem 15rem;
+  margin: 9rem;
 }
 .rotate-excl {
   transform: rotate(180deg);
@@ -20,7 +20,7 @@ html {
 
 .container {
   display: flex;
-  gap: 5rem;
+  gap: 12rem;
 }
 .title {
   font-size: 1.4rem;
@@ -128,7 +128,7 @@ html {
   background-color: #f9f7e1;
   border-radius: 8px;
 }
-.icon-fot-box{
+.icon-fot-box {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -138,12 +138,110 @@ html {
   padding: 12px;
   border-radius: 50%;
 }
-.fot-heading{
+.fot-heading {
   font-size: 1.4rem;
   font-size: 600;
-  margin-bottom: .8rem;
+  margin-bottom: 0.8rem;
 }
-.fot-desc{
+.fot-desc {
   color: #333;
   font-size: 1.2rem;
+}
+
+/* ***************** */
+/* right side */
+/* ***************** */
+.popup-card-box {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.card {
+  --color: #92a56a;
+  --progress: 45%;
+
+  position: relative;
+  overflow: hidden;
+
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  padding: 2rem 8rem 2rem 2rem;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+.card::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #e7ecd8;
+}
+.card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: var(--progress);
+  height: 3px;
+  background: var(--color);
+  border-radius: 0 3px 3px 0;
+}
+.success-card {
+  --color: #719b1c;
+  --progress: 55%;
+}
+
+.warning-card {
+  --color: #f2ad16;
+  --progress: 45%;
+}
+
+.error-card {
+  --color: #ef3333;
+  --progress: 85%;
+}
+
+.info-card {
+  --color: #2683d9;
+  --progress: 75%;
+}
+
+.special-card {
+  --color: #8855d5;
+  --progress: 92%;
+}
+.custom-card{
+  --color: #777;
+  --progress: 64%;
+}
+
+.right-card-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+.right-card-desc {
+  columns: #777;
+  font-size: 1.2rem;
+}
+.right-card-icon-box {
+  font-size: 2.2rem;
+  color: #92a56a;
+  background-color: rgba(146, 165, 106, 0.1);
+  padding: 12px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.fa-xmark {
+  position: absolute;
+  top: 1.8rem;
+  right: 2.4rem;
+  font-size: 1.8rem;
+  color: #777;
 }

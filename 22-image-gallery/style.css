@@ -5,7 +5,7 @@
 }
 body {
   font-family: "Courier New", Courier, monospace;
-  background-color: #c6bfb2;
+  background-color: #fff9e0;
 }
 html {
   font-size: 62.5%;
@@ -59,7 +59,7 @@ html {
   background-color: #6f8610;
 }
 .norm {
-  background-color: transparent;
+  background-color: #eee;
   box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.1);
 }
 /* img */
@@ -125,5 +125,50 @@ html {
 .img2 {
   height: 100px;
   width: 100%;
+  border-radius: 12px;
+}
+.norm-img-row {
+  margin-top: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.norm-img-row2 {
+  height: 70px;
+  width: 90px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+.hover{
+  transition: all .2s ease-out;
+}
+.hover:hover {
+  box-shadow: 0 0 0 2px #6f8610;
+  padding: 5px;
+}
+.hover:active{
+  padding: 0px;
+}
+.m {
+  color: #8c9e42;
+  background-color: #ebf1cb;
+  height: 70px;
+  width: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 12px;
+}
+.m:active{
+  transform: translateY(2px) scale(1.02);
+}
+.active {
+  box-shadow: 0 0 0 2px #6f8610;
+  padding: 5px 7px;
   border-radius: 12px;
 }

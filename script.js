@@ -150,7 +150,7 @@ const components = [
     slug: "modal-popup",
     title: "Modal (Popup)",
     desc: "Overlay dialog with focus trap and multiple close controls.",
-    built: false,
+    built: true,
   },
   {
     day: 22,

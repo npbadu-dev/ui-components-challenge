@@ -5,7 +5,7 @@
 }
 body {
   font-family: "Courier New", Courier, monospace;
-  background-color: #f7f8f1;
+  background-color: #c6bfb2;
 }
 html {
   font-size: 62.5%;
@@ -46,13 +46,12 @@ html {
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: all .3s ease-out;
+  transition: all 0.3s ease-out;
 }
-.btn:hover{
+.btn:hover {
   transform: translateY(-2px) scale(1.06);
-
 }
-.btn:active{
+.btn:active {
   transform: translateY(2px) scale(1.02);
 }
 .all {
@@ -62,4 +61,41 @@ html {
 .norm {
   background-color: transparent;
   box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.1);
+}
+/* img */
+.img-row {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 1.2rem;
+  width: 100%;
+  margin-top: 3rem;
+}
+.div1 {
+  grid-column: 1;
+  grid-row: 1/4;
+}
+.img1, .img2 {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.div1,
+.div2 {
+  overflow: hidden;
+}
+.div1:hover .img1 {
+  transform: scale(1.2);
+}
+.div2:hover .img2{
+  transform: scale(1.1);
+}
+.img1 {
+  height: 330px;
+  width: 100%;
+  border-radius: 12px;
+}
+.img2 {
+  height: 100px;
+  width: 100%;
+  border-radius: 12px;
 }

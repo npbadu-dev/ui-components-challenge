@@ -138,6 +138,7 @@ html {
   padding: 4px;
   position: relative;
   height: 110px;
+  width: 110px;
   /* overflow: hidden; */
 }
 .pr-img {
@@ -230,6 +231,7 @@ html {
 }
 .profile-info-section {
   margin-top: 4rem;
+
   display: flex;
   flex-direction: column;
   box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
@@ -239,6 +241,7 @@ html {
 }
 
 .sec-heading {
+  padding-top: 2rem;
   font-size: 1.8rem;
   font-weight: 600;
 }
@@ -284,7 +287,6 @@ label {
   box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.5);
   color: #555;
 }
-
 
 /* ***(((( Toggle Switch )))) ******* */
 .switch {
@@ -387,3 +389,38 @@ input:checked + .slider:before {
     0 0 0 3px #fff,
     0 0 0 5px #777;
 }
+
+/* ************* Tool Tip ********* */
+
+/* .pencil {
+  position: relative;
+  cursor: pointer;
+} */
+
+/* Tooltip */
+.pencil::after {
+  content: "Edit image";
+  position: absolute;
+  bottom: -26px;
+  right: 0;
+
+  background-color: #333;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  white-space: nowrap;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition: opacity 0.2s ease;
+}
+
+/* Show tooltip only on hover */
+.pencil:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+

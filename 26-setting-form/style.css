@@ -125,15 +125,64 @@ html {
 /* ******************* Setting Form ******************** */
 .setting-section {
   position: absolute;
-
   top: 0;
   left: 30rem;
 
-  width: 100%;
+  width: 80%;
+  padding: 4rem 5rem;
 }
 
 .pr-img {
   height: 150px;
+}
+.setting-form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.row-1 {
+  display: flex;
+  justify-content: space-between;
+  /* gap: 10rem; */
+}
+.rol1-btn {
+  justify-content: flex-end;
+}
+.ro1-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.heading {
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+.desc {
+  font-size: 1.8rem;
+  color: #777;
+  font-size: 600;
+}
+.submit {
+  background-color: #6556ec;
+  border: none;
+  padding: 12px 18px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all .3s ease-out;
+}
+.submit:hover{
+  background-color: #1f08ed;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.submit:active{
+  transform: translateY(3px);
 }
 
 /* ***(((( Toggle Switch )))) ******* */

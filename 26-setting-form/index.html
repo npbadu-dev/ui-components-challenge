@@ -113,72 +113,75 @@
             </div>
           </div>
           <div class="profile-info-section">
-            <p class="pr-heading">Personal Information</p>
-            <p class="pr-desc">
-              Update your personal details and how others see you.
-            </p>
-            <div class="profile-info-card">
-              <div class="pr-img-box">
-                <img
-                  src="assets/profile.png"
-                  alt="nitesh prasad badu"
-                  class="pr-img"
-                />
-                <i class="fa-solid fa-pencil pencil"></i>
-              </div>
-              <div class="pr-input-box">
-                <div class="pr-row1">
-                  <div class="full-name">
-                    <label for="name">Full Name</label>
-                    <input
-                      type="text"
-                      name="name"
-                      id="name"
-                      class="full-name"
-                      placeholder="Nitesh Prasad Badu"
-                    />
-                  </div>
-                  <div class="user-name">
-                    <label for="username">Username</label>
-                    <input
-                      type="text"
-                      name="username"
-                      id="username"
-                      class="username"
-                      placeholder="@npbadu-dev"
-                    />
-                  </div>
+            <div class="profile-section">
+              <p class="sec-heading">Profile Information</p>
+              <p class="sec-desc">
+                Update your personal details and how others see you.
+              </p>
+              <div class="profile-info-card">
+                <div class="pr-img-box">
+                  <img
+                    src="assets/profile.png"
+                    alt="nitesh prasad badu"
+                    class="pr-img"
+                  />
+                  <i class="fa-solid fa-pencil pencil"></i>
                 </div>
-                <div class="pr-row2">
-                  <div class="bio">
-                    <label for="bio">Bio</label>
-                    <textarea
-                      name="bio"
-                      id="bio"
-                      placeholder="Frontend developer on mission to build beautiful and useful things for the web."
-                    ></textarea>
+                <div class="pr-input-box">
+                  <div class="pr-row1">
+                    <div class="full-name-box">
+                      <label for="name">Full Name</label>
+                      <input
+                        type="text"
+                        name="name"
+                        id="name"
+                        class="full-name"
+                        placeholder="Nitesh Prasad Badu"
+                      />
+                    </div>
+                    <div class="full-name-box">
+                      <label for="username">Username</label>
+                      <input
+                        type="text"
+                        name="username"
+                        id="username"
+                        class="full-name"
+                        placeholder="@npbadu-dev"
+                      />
+                    </div>
                   </div>
-                </div>
-                <div class="pr-row3">
-                  <div class="location">
-                    <label for="location">Location</label>
-                    <input
-                      type="text"
-                      name="location"
-                      id="location"
-                      class="location"
-                      placeholder="Kathmandu, Nepal"
-                    />
+                  <div class="pr-row2">
+                    <div class="full-name-box">
+                      <label for="bio">Bio</label>
+                      <textarea
+                        name="bio"
+                        id="bio"
+                        class="full-name"
+                        placeholder="Frontend developer on mission to build beautiful and useful things for the web."
+                      ></textarea>
+                    </div>
                   </div>
-                  <div class="website">
-                    <label for="website">Website</label>
-                    <input
-                      type="text"
-                      name="website"
-                      id="website"
-                      class="website"
-                      placeholder="https://portfolio-kappa-gilt-42.vercel.app/"
-                    />
+                  <div class="pr-row1">
+                    <div class="full-name-box">
+                      <label for="location">Location</label>
+                      <input
+                        type="text"
+                        name="location"
+                        id="location"
+                        class="full-name"
+                        placeholder="Kathmandu, Nepal"
+                      />
+                    </div>
+                    <div class="full-name-box">
+                      <label for="website">Website</label>
+                      <input
+                        type="text"
+                        name="website"
+                        id="website"
+                        class="full-name"
+                        placeholder="https://portfolio-kappa-gilt-42.vercel.app/"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -186,7 +189,7 @@
           </div>
           <div class="account-setting-section">
             <p class="acc-heading">Account Settings</p>
-            <p class="acc-desc">Manage your account preferences and email.</p>
+            <p class="desc">Manage your account preferences and email.</p>
             <div class="account-setting-card">
               <div class="acc-ro1">
                 <div class="email-add">
@@ -235,7 +238,7 @@
           </div>
           <div class="notification-section">
             <p class="not-title">Notifications Preference</p>
-            <p class="not-desc">Choose what you want to be notified about.</p>
+            <p class="desc">Choose what you want to be notified about.</p>
             <div class="notification-card">
               <div class="not-ro1">
                 <div class="not-card">
@@ -301,7 +304,7 @@
           </div>
           <div class="appearance-section">
             <p class="app-title">Appearance</p>
-            <p class="app-desc">Customize how the application looks for you.</p>
+            <p class="desc">Customize how the application looks for you.</p>
             <div class="app-row1">
               <div class="theme-card">
                 <label for="theme">Theme</label>
@@ -347,7 +350,7 @@
           </div>
           <div class="security-section">
             <p class="sec-title">Security</p>
-            <p class="sec-desc">Manage your password and account security</p>
+            <p class="desc">Manage your password and account security</p>
             <div class="sec-ro1">
               <div class="pass">
                 <label for="password">Password</label>
@@ -361,8 +364,10 @@
               </div>
               <div class="two-factor">
                 <label for="two">Two-Factor Authentication</label>
-                <p class="two-fact-text">Add an extra layer of security to</p>
-                <p class="two-fact-text">your account.</p>
+                <p class="two-fact-text desc">
+                  Add an extra layer of security to
+                </p>
+                <p class="two-fact-text desc">your account.</p>
               </div>
               <div class="enable-two-factor">
                 <button class="two-fact-btn">

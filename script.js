@@ -157,7 +157,7 @@ const components = [
     slug: "image-gallery",
     title: "Image Gallery",
     desc: "Grid gallery with a lightbox preview.",
-    built: false,
+    built: true,
   },
   {
     day: 23,

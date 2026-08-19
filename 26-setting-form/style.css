@@ -253,7 +253,7 @@ html {
   justify-content: space-between;
   margin-top: 3rem;
 }
-.account-setting-card{
+.account-setting-card {
   flex-direction: column;
   gap: 3rem;
 }
@@ -292,16 +292,54 @@ label {
   color: #555;
 }
 
-/* **** Account setting *****--- */
-.account-setting-card{
+/* ****** Notification Section ********* */
 
+.notification-card {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding-left: 2rem;
+  /* padding-right: 12rem;
+  padding-left: 4rem; */
+  padding-bottom: 3rem;
+  margin-top: 3rem;
 }
+.not-ro1 {
+  display: flex;
+  gap: 10rem;
+}
+.not-card {
+  display: flex;
+  gap: 3rem;
+}
+.not-icon-box {
+  background-color: #f3f2fe;
+  padding: 12px;
+  font-size: 1.8rem;
+  color: #6556ec;
+  font-weight: 600;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon-text-title{
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.icon-text-desc{
+  margin-top: .4rem;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #777;
+}
+
 /* ***(((( Toggle Switch )))) ******* */
 .switch {
   position: relative;
   display: inline-block;
-  width: 60px;
-  height: 34px;
+  width: 50px;
+  height: 24px;
 }
 
 .switch input {
@@ -325,8 +363,8 @@ label {
 .slider:before {
   position: absolute;
   content: "";
-  height: 26px;
-  width: 26px;
+  height: 16px;
+  width: 16px;
   left: 4px;
   bottom: 4px;
   background-color: white;
@@ -431,4 +469,3 @@ input:checked + .slider:before {
   opacity: 1;
   visibility: visible;
 }
-

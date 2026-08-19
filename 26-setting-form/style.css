@@ -253,6 +253,10 @@ html {
   justify-content: space-between;
   margin-top: 3rem;
 }
+.account-setting-card{
+  flex-direction: column;
+  gap: 3rem;
+}
 .pr-input-box {
   display: flex;
   flex-direction: column;
@@ -288,6 +292,10 @@ label {
   color: #555;
 }
 
+/* **** Account setting *****--- */
+.account-setting-card{
+
+}
 /* ***(((( Toggle Switch )))) ******* */
 .switch {
   position: relative;

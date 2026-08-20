@@ -1,0 +1,1176 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gym Membership Application</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        --primary: #ff5a1f;
+        --primary-dark: #e9480f;
+        --dark: #111111;
+        --text: #333;
+        --muted: #777;
+        --border: #ddd;
+        --light: #f6f6f6;
+        --white: #fff;
+        --success: #22a06b;
+      }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        min-height: 100vh;
+        background:
+          linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.72)),
+          linear-gradient(135deg, #171717, #333);
+        color: var(--text);
+        padding: 40px 20px;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 1050px;
+        margin: auto;
+      }
+
+      /* Header */
+      .header {
+        text-align: center;
+        color: white;
+        margin-bottom: 30px;
+      }
+
+      .logo {
+        display: inline-block;
+        background: var(--primary);
+        color: white;
+        font-weight: 900;
+        font-size: 24px;
+        padding: 10px 18px;
+        border-radius: 8px;
+        margin-bottom: 15px;
+        letter-spacing: 1px;
+      }
+
+      .header h1 {
+        font-size: 36px;
+        margin-bottom: 8px;
+      }
+
+      .header p {
+        color: #ccc;
+      }
+
+      /* Main card */
+      .form-card {
+        background: var(--white);
+        border-radius: 18px;
+        overflow: hidden;
+        box-shadow: 0 25px 70px rgba(0, 0, 0, 0.3);
+      }
+
+      /* Progress */
+      .progress-area {
+        background: #fafafa;
+        padding: 30px 45px;
+        border-bottom: 1px solid #eee;
+      }
+
+      .progress {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        max-width: 750px;
+        margin: auto;
+      }
+
+      .progress::before {
+        content: "";
+        position: absolute;
+        top: 19px;
+        left: 10%;
+        right: 10%;
+        height: 3px;
+        background: #ddd;
+        z-index: 0;
+      }
+
+      .progress-line {
+        position: absolute;
+        top: 19px;
+        left: 10%;
+        width: 0%;
+        height: 3px;
+        background: var(--primary);
+        z-index: 1;
+        transition: width 0.3s ease;
+      }
+
+      .step-indicator {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        background: transparent;
+      }
+
+      .circle {
+        width: 40px;
+        height: 40px;
+        margin: auto;
+        border-radius: 50%;
+        background: white;
+        border: 3px solid #ddd;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+
+      .step-indicator span {
+        display: block;
+        margin-top: 8px;
+        font-size: 13px;
+        color: var(--muted);
+        font-weight: 600;
+      }
+
+      .step-indicator.active .circle,
+      .step-indicator.completed .circle {
+        background: var(--primary);
+        border-color: var(--primary);
+        color: white;
+      }
+
+      .step-indicator.active span,
+      .step-indicator.completed span {
+        color: var(--primary);
+      }
+
+      /* Form */
+      .form-content {
+        padding: 45px;
+      }
+
+      .form-step {
+        display: none;
+        animation: fadeIn 0.3s ease;
+      }
+
+      .form-step.active {
+        display: block;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(8px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .step-title {
+        margin-bottom: 30px;
+      }
+
+      .step-title h2 {
+        color: var(--dark);
+        font-size: 26px;
+        margin-bottom: 7px;
+      }
+
+      .step-title p {
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      /* Inputs */
+      .form-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 22px;
+      }
+
+      .form-group {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .form-group.full {
+        grid-column: 1 / -1;
+      }
+
+      label {
+        font-size: 14px;
+        font-weight: 700;
+        color: #222;
+        margin-bottom: 8px;
+      }
+
+      .required {
+        color: var(--primary);
+      }
+
+      input,
+      select,
+      textarea {
+        width: 100%;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 13px 14px;
+        font-size: 15px;
+        outline: none;
+        transition: 0.2s;
+        background: white;
+      }
+
+      textarea {
+        min-height: 100px;
+        resize: vertical;
+      }
+
+      input:focus,
+      select:focus,
+      textarea:focus {
+        border-color: var(--primary);
+        box-shadow: 0 0 0 3px rgba(255, 90, 31, 0.1);
+      }
+
+      input.error,
+      select.error {
+        border-color: #e53935;
+      }
+
+      .error-message {
+        color: #e53935;
+        font-size: 12px;
+        margin-top: 5px;
+        display: none;
+      }
+
+      .error-message.show {
+        display: block;
+      }
+
+      /* Membership cards */
+      .plans {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+      }
+
+      .plan {
+        position: relative;
+      }
+
+      .plan input {
+        position: absolute;
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      .plan label {
+        display: block;
+        height: 100%;
+        border: 2px solid #ddd;
+        border-radius: 12px;
+        padding: 25px 20px;
+        cursor: pointer;
+        transition: 0.2s;
+      }
+
+      .plan label:hover {
+        border-color: #aaa;
+      }
+
+      .plan input:checked + label {
+        border-color: var(--primary);
+        background: #fff8f5;
+      }
+
+      .plan-name {
+        font-size: 20px;
+        font-weight: 800;
+        color: var(--dark);
+        margin-bottom: 8px;
+      }
+
+      .plan-price {
+        font-size: 27px;
+        font-weight: 900;
+        color: var(--primary);
+        margin-bottom: 15px;
+      }
+
+      .plan-price small {
+        font-size: 13px;
+        color: #777;
+        font-weight: normal;
+      }
+
+      .plan ul {
+        list-style: none;
+      }
+
+      .plan li {
+        font-size: 13px;
+        color: #666;
+        margin: 9px 0;
+      }
+
+      .plan li::before {
+        content: "✓";
+        color: var(--success);
+        font-weight: bold;
+        margin-right: 7px;
+      }
+
+      /* Checkbox */
+      .checkbox-group {
+        margin-top: 25px;
+      }
+
+      .checkbox-label {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        cursor: pointer;
+        font-weight: normal;
+        line-height: 1.5;
+      }
+
+      .checkbox-label input {
+        width: auto;
+        margin-top: 4px;
+        accent-color: var(--primary);
+      }
+
+      /* Review */
+      .review-box {
+        background: #f8f8f8;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-bottom: 20px;
+      }
+
+      .review-header {
+        background: var(--dark);
+        color: white;
+        padding: 14px 18px;
+        font-weight: bold;
+      }
+
+      .review-row {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 13px 18px;
+        border-bottom: 1px solid #e5e5e5;
+      }
+
+      .review-row:last-child {
+        border-bottom: none;
+      }
+
+      .review-row span:first-child {
+        color: #777;
+      }
+
+      .review-row span:last-child {
+        font-weight: 600;
+        color: #222;
+        text-align: right;
+      }
+
+      /* Buttons */
+      .buttons {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 35px;
+        padding-top: 25px;
+        border-top: 1px solid #eee;
+      }
+
+      button {
+        border: none;
+        border-radius: 8px;
+        padding: 13px 25px;
+        font-size: 15px;
+        font-weight: 700;
+        cursor: pointer;
+        transition: 0.2s;
+      }
+
+      .btn-back {
+        background: #eee;
+        color: #333;
+      }
+
+      .btn-back:hover {
+        background: #ddd;
+      }
+
+      .btn-next,
+      .btn-submit {
+        background: var(--primary);
+        color: white;
+      }
+
+      .btn-next:hover,
+      .btn-submit:hover {
+        background: var(--primary-dark);
+        transform: translateY(-1px);
+      }
+
+      .btn-submit {
+        display: none;
+      }
+
+      /* Success */
+      .success {
+        display: none;
+        text-align: center;
+        padding: 70px 30px;
+      }
+
+      .success.show {
+        display: block;
+      }
+
+      .success-icon {
+        width: 75px;
+        height: 75px;
+        margin: 0 auto 20px;
+        border-radius: 50%;
+        background: #e7f8ef;
+        color: var(--success);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 38px;
+        font-weight: bold;
+      }
+
+      .success h2 {
+        font-size: 30px;
+        color: var(--dark);
+        margin-bottom: 10px;
+      }
+
+      .success p {
+        color: #777;
+        line-height: 1.6;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        body {
+          padding: 20px 12px;
+        }
+
+        .header h1 {
+          font-size: 27px;
+        }
+
+        .progress-area,
+        .form-content {
+          padding: 25px 20px;
+        }
+
+        .progress::before {
+          left: 7%;
+          right: 7%;
+        }
+
+        .progress-line {
+          left: 7%;
+        }
+
+        .step-indicator span {
+          font-size: 11px;
+        }
+
+        .circle {
+          width: 34px;
+          height: 34px;
+          font-size: 13px;
+        }
+
+        .progress::before,
+        .progress-line {
+          top: 16px;
+        }
+
+        .form-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .form-group.full {
+          grid-column: auto;
+        }
+
+        .plans {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 450px) {
+        .step-indicator span {
+          display: none;
+        }
+
+        .buttons button {
+          padding: 12px 18px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="logo">FITZONE</div>
+        <h1>Gym Membership</h1>
+        <p>Start your fitness journey today.</p>
+      </div>
+
+      <div class="form-card">
+        <!-- Progress -->
+        <div class="progress-area">
+          <div class="progress">
+            <div class="progress-line" id="progressLine"></div>
+
+            <div class="step-indicator active">
+              <div class="circle">1</div>
+              <span>Personal</span>
+            </div>
+
+            <div class="step-indicator">
+              <div class="circle">2</div>
+              <span>Membership</span>
+            </div>
+
+            <div class="step-indicator">
+              <div class="circle">3</div>
+              <span>Health</span>
+            </div>
+
+            <div class="step-indicator">
+              <div class="circle">4</div>
+              <span>Review</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-content">
+          <form id="membershipForm">
+            <!-- STEP 1 -->
+            <div class="form-step active">
+              <div class="step-title">
+                <h2>Personal Information</h2>
+                <p>Tell us a little about yourself.</p>
+              </div>
+
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="firstName">
+                    First Name <span class="required">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="firstName"
+                    name="firstName"
+                    placeholder="John"
+                  />
+                  <div class="error-message">Please enter your first name.</div>
+                </div>
+
+                <div class="form-group">
+                  <label for="lastName">
+                    Last Name <span class="required">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="lastName"
+                    name="lastName"
+                    placeholder="Doe"
+                  />
+                  <div class="error-message">Please enter your last name.</div>
+                </div>
+
+                <div class="form-group">
+                  <label for="email">
+                    Email Address <span class="required">*</span>
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="john@example.com"
+                  />
+                  <div class="error-message">Please enter a valid email.</div>
+                </div>
+
+                <div class="form-group">
+                  <label for="phone">
+                    Phone Number <span class="required">*</span>
+                  </label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="+1 234 567 8900"
+                  />
+                  <div class="error-message">
+                    Please enter your phone number.
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="dob">
+                    Date of Birth <span class="required">*</span>
+                  </label>
+                  <input type="date" id="dob" name="dob" />
+                  <div class="error-message">
+                    Please enter your date of birth.
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="gender">Gender</label>
+                  <select id="gender" name="gender">
+                    <option value="">Select gender</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Non-binary</option>
+                    <option>Prefer not to say</option>
+                  </select>
+                </div>
+
+                <div class="form-group full">
+                  <label for="address">Address</label>
+                  <textarea
+                    id="address"
+                    name="address"
+                    placeholder="Enter your address"
+                  ></textarea>
+                </div>
+              </div>
+            </div>
+
+            <!-- STEP 2 -->
+            <div class="form-step">
+              <div class="step-title">
+                <h2>Choose Your Membership</h2>
+                <p>Select the plan that works best for you.</p>
+              </div>
+
+              <div class="plans">
+                <div class="plan">
+                  <input type="radio" id="basic" name="plan" value="Basic" />
+                  <label for="basic">
+                    <div class="plan-name">Basic</div>
+                    <div class="plan-price">$25 <small>/ month</small></div>
+
+                    <ul>
+                      <li>Gym access</li>
+                      <li>Locker access</li>
+                      <li>Free Wi-Fi</li>
+                    </ul>
+                  </label>
+                </div>
+
+                <div class="plan">
+                  <input
+                    type="radio"
+                    id="premium"
+                    name="plan"
+                    value="Premium"
+                  />
+                  <label for="premium">
+                    <div class="plan-name">Premium</div>
+                    <div class="plan-price">$45 <small>/ month</small></div>
+
+                    <ul>
+                      <li>24/7 gym access</li>
+                      <li>Group classes</li>
+                      <li>Sauna access</li>
+                      <li>Free fitness assessment</li>
+                    </ul>
+                  </label>
+                </div>
+
+                <div class="plan">
+                  <input type="radio" id="elite" name="plan" value="Elite" />
+                  <label for="elite">
+                    <div class="plan-name">Elite</div>
+                    <div class="plan-price">$70 <small>/ month</small></div>
+
+                    <ul>
+                      <li>Everything in Premium</li>
+                      <li>Personal trainer</li>
+                      <li>Nutrition consultation</li>
+                      <li>Priority booking</li>
+                    </ul>
+                  </label>
+                </div>
+              </div>
+
+              <div class="form-grid" style="margin-top: 25px">
+                <div class="form-group">
+                  <label for="startDate">
+                    Preferred Start Date <span class="required">*</span>
+                  </label>
+                  <input type="date" id="startDate" name="startDate" />
+                  <div class="error-message">Please select a start date.</div>
+                </div>
+
+                <div class="form-group">
+                  <label for="payment">
+                    Payment Method <span class="required">*</span>
+                  </label>
+
+                  <select id="payment" name="payment">
+                    <option value="">Select payment method</option>
+                    <option>Credit / Debit Card</option>
+                    <option>Bank Transfer</option>
+                    <option>Cash at Gym</option>
+                  </select>
+
+                  <div class="error-message">
+                    Please select a payment method.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- STEP 3 -->
+            <div class="form-step">
+              <div class="step-title">
+                <h2>Health & Preferences</h2>
+                <p>Help us make your gym experience safer and better.</p>
+              </div>
+
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="fitnessLevel">Current Fitness Level</label>
+                  <select id="fitnessLevel" name="fitnessLevel">
+                    <option value="">Select level</option>
+                    <option>Beginner</option>
+                    <option>Intermediate</option>
+                    <option>Advanced</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="goal">Primary Fitness Goal</label>
+                  <select id="goal" name="goal">
+                    <option value="">Select goal</option>
+                    <option>Weight Loss</option>
+                    <option>Build Muscle</option>
+                    <option>Improve Fitness</option>
+                    <option>Strength Training</option>
+                    <option>General Health</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+
+                <div class="form-group full">
+                  <label for="conditions">
+                    Existing Injuries or Medical Conditions
+                  </label>
+
+                  <textarea
+                    id="conditions"
+                    name="conditions"
+                    placeholder="Please tell us about any injuries, conditions, or physical limitations."
+                  ></textarea>
+                </div>
+
+                <div class="form-group full">
+                  <label for="experience"> Previous Gym Experience </label>
+
+                  <textarea
+                    id="experience"
+                    name="experience"
+                    placeholder="Tell us about your previous workout experience."
+                  ></textarea>
+                </div>
+              </div>
+
+              <div class="checkbox-group">
+                <label class="checkbox-label">
+                  <input type="checkbox" id="emergency" name="emergency" />
+                  <span>
+                    I understand that I should consult a medical professional if
+                    I have concerns about exercising.
+                  </span>
+                </label>
+
+                <br />
+
+                <label class="checkbox-label">
+                  <input type="checkbox" id="terms" name="terms" />
+                  <span>
+                    I agree to the gym's membership terms and conditions.
+                    <span class="required">*</span>
+                  </span>
+                </label>
+              </div>
+            </div>
+
+            <!-- STEP 4 -->
+            <div class="form-step">
+              <div class="step-title">
+                <h2>Review Your Application</h2>
+                <p>Please check your information before submitting.</p>
+              </div>
+
+              <div class="review-box">
+                <div class="review-header">Personal Information</div>
+
+                <div class="review-row">
+                  <span>Name</span>
+                  <span id="reviewName">—</span>
+                </div>
+
+                <div class="review-row">
+                  <span>Email</span>
+                  <span id="reviewEmail">—</span>
+                </div>
+
+                <div class="review-row">
+                  <span>Phone</span>
+                  <span id="reviewPhone">—</span>
+                </div>
+
+                <div class="review-row">
+                  <span>Date of Birth</span>
+                  <span id="reviewDob">—</span>
+                </div>
+              </div>
+
+              <div class="review-box">
+                <div class="review-header">Membership</div>
+
+                <div class="review-row">
+                  <span>Plan</span>
+                  <span id="reviewPlan">—</span>
+                </div>
+
+                <div class="review-row">
+                  <span>Start Date</span>
+                  <span id="reviewStart">—</span>
+                </div>
+
+                <div class="review-row">
+                  <span>Payment</span>
+                  <span id="reviewPayment">—</span>
+                </div>
+              </div>
+
+              <div class="review-box">
+                <div class="review-header">Fitness Preferences</div>
+
+                <div class="review-row">
+                  <span>Fitness Level</span>
+                  <span id="reviewLevel">—</span>
+                </div>
+
+                <div class="review-row">
+                  <span>Fitness Goal</span>
+                  <span id="reviewGoal">—</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Navigation -->
+            <div class="buttons">
+              <button type="button" class="btn-back" id="backBtn">
+                ← Back
+              </button>
+
+              <button type="button" class="btn-next" id="nextBtn">
+                Next →
+              </button>
+
+              <button type="submit" class="btn-submit" id="submitBtn">
+                Submit Application ✓
+              </button>
+            </div>
+          </form>
+
+          <!-- Success -->
+          <div class="success" id="successMessage">
+            <div class="success-icon">✓</div>
+
+            <h2>Application Submitted!</h2>
+
+            <p>
+              Thank you for applying for a FITZONE membership. We've received
+              your application and will contact you shortly with the next steps.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const form = document.getElementById("membershipForm");
+      const steps = document.querySelectorAll(".form-step");
+      const indicators = document.querySelectorAll(".step-indicator");
+      const progressLine = document.getElementById("progressLine");
+
+      const nextBtn = document.getElementById("nextBtn");
+      const backBtn = document.getElementById("backBtn");
+      const submitBtn = document.getElementById("submitBtn");
+
+      const successMessage = document.getElementById("successMessage");
+
+      let currentStep = 0;
+
+      // -------------------------
+      // Show current step
+      // -------------------------
+
+      function showStep(step) {
+        steps.forEach((item, index) => {
+          item.classList.toggle("active", index === step);
+        });
+
+        indicators.forEach((indicator, index) => {
+          indicator.classList.remove("active", "completed");
+
+          if (index < step) {
+            indicator.classList.add("completed");
+          }
+
+          if (index === step) {
+            indicator.classList.add("active");
+          }
+        });
+
+        // Progress line
+        const progress = (step / (steps.length - 1)) * 80;
+        progressLine.style.width = progress + "%";
+
+        // Back button
+        backBtn.style.visibility = step === 0 ? "hidden" : "visible";
+
+        // Next / Submit
+        if (step === steps.length - 1) {
+          nextBtn.style.display = "none";
+          submitBtn.style.display = "block";
+
+          updateReview();
+        } else {
+          nextBtn.style.display = "block";
+          submitBtn.style.display = "none";
+        }
+
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }
+
+      // -------------------------
+      // Validation
+      // -------------------------
+
+      function validateStep() {
+        let valid = true;
+
+        // Step 1
+        if (currentStep === 0) {
+          const requiredFields = [
+            "firstName",
+            "lastName",
+            "email",
+            "phone",
+            "dob",
+          ];
+
+          requiredFields.forEach((id) => {
+            const input = document.getElementById(id);
+            const error = input.nextElementSibling;
+
+            if (!input.value.trim()) {
+              input.classList.add("error");
+              error.classList.add("show");
+              valid = false;
+            } else {
+              input.classList.remove("error");
+              error.classList.remove("show");
+            }
+          });
+
+          // Email validation
+          const email = document.getElementById("email");
+
+          if (email.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
+            email.classList.add("error");
+            email.nextElementSibling.classList.add("show");
+            valid = false;
+          }
+        }
+
+        // Step 2
+        if (currentStep === 1) {
+          const plan = document.querySelector('input[name="plan"]:checked');
+
+          if (!plan) {
+            alert("Please select a membership plan.");
+            valid = false;
+          }
+
+          const startDate = document.getElementById("startDate");
+          const payment = document.getElementById("payment");
+
+          if (!startDate.value) {
+            startDate.classList.add("error");
+            startDate.nextElementSibling.classList.add("show");
+            valid = false;
+          } else {
+            startDate.classList.remove("error");
+            startDate.nextElementSibling.classList.remove("show");
+          }
+
+          if (!payment.value) {
+            payment.classList.add("error");
+            payment.nextElementSibling.classList.add("show");
+            valid = false;
+          } else {
+            payment.classList.remove("error");
+            payment.nextElementSibling.classList.remove("show");
+          }
+        }
+
+        // Step 3
+        if (currentStep === 2) {
+          const terms = document.getElementById("terms");
+
+          if (!terms.checked) {
+            alert("Please agree to the membership terms and conditions.");
+            valid = false;
+          }
+        }
+
+        return valid;
+      }
+
+      // -------------------------
+      // Next
+      // -------------------------
+
+      nextBtn.addEventListener("click", () => {
+        if (!validateStep()) {
+          return;
+        }
+
+        if (currentStep < steps.length - 1) {
+          currentStep++;
+          showStep(currentStep);
+        }
+      });
+
+      // -------------------------
+      // Back
+      // -------------------------
+
+      backBtn.addEventListener("click", () => {
+        if (currentStep > 0) {
+          currentStep--;
+          showStep(currentStep);
+        }
+      });
+
+      // -------------------------
+      // Review information
+      // -------------------------
+
+      function updateReview() {
+        const firstName = document.getElementById("firstName").value;
+        const lastName = document.getElementById("lastName").value;
+
+        const plan = document.querySelector('input[name="plan"]:checked');
+
+        document.getElementById("reviewName").textContent =
+          `${firstName} ${lastName}`;
+
+        document.getElementById("reviewEmail").textContent =
+          document.getElementById("email").value;
+
+        document.getElementById("reviewPhone").textContent =
+          document.getElementById("phone").value;
+
+        document.getElementById("reviewDob").textContent =
+          document.getElementById("dob").value || "—";
+
+        document.getElementById("reviewPlan").textContent = plan
+          ? plan.value
+          : "—";
+
+        document.getElementById("reviewStart").textContent =
+          document.getElementById("startDate").value || "—";
+
+        document.getElementById("reviewPayment").textContent =
+          document.getElementById("payment").value || "—";
+
+        document.getElementById("reviewLevel").textContent =
+          document.getElementById("fitnessLevel").value || "—";
+
+        document.getElementById("reviewGoal").textContent =
+          document.getElementById("goal").value || "—";
+      }
+
+      // -------------------------
+      // Submit
+      // -------------------------
+
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        if (!validateStep()) {
+          return;
+        }
+
+        form.style.display = "none";
+
+        document.querySelector(".progress-area").style.display = "none";
+
+        successMessage.classList.add("show");
+      });
+
+      // -------------------------
+      // Remove errors while typing
+      // -------------------------
+
+      document.querySelectorAll("input, select, textarea").forEach((input) => {
+        input.addEventListener("input", () => {
+          input.classList.remove("error");
+
+          const error = input.nextElementSibling;
+
+          if (error && error.classList.contains("error-message")) {
+            error.classList.remove("show");
+          }
+        });
+      });
+
+      // Initial state
+      showStep(currentStep);
+    </script>
+  </body>
+</html>

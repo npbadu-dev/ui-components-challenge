@@ -67,24 +67,24 @@ html {
   width: 41rem;
   box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.1);
 }
-.up{
-  transition: all .3s ease-out;
+.up {
+  transition: all 0.3s ease-out;
 }
-.up:hover{
+.up:hover {
   transform: translateY(-3px);
   cursor: pointer;
 }
-.up:active{
+.up:active {
   transform: scale(0.9);
 }
-.down{
-  transition: all .3s ease-out;
+.down {
+  transition: all 0.3s ease-out;
 }
-.down:hover{
+.down:hover {
   transform: translateY(4px);
   cursor: pointer;
 }
-.down:active{
+.down:active {
   transform: scale(0.9);
 }
 
@@ -145,6 +145,56 @@ html {
 .more-link:hover .more {
   text-decoration: underline;
 }
-.more-link:active .more{
+.more-link:active .more {
   text-decoration: none;
+}
+
+/* ********* Pagination *************** */
+.pagination {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.page,
+.arrow {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #eeeee5;
+  border-radius: 9px;
+  background: #fafaf5;
+  color: #77776f;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.arrow {
+  color: #7d9c22;
+  font-size: 22px;
+  font-weight: 300;
+}
+
+.page:hover,
+.arrow:hover {
+  background: #f1f2e9;
+}
+
+.page.active {
+  background: #6c8d16;
+  border-color: #6c8d16;
+  color: white;
+  box-shadow: 0 2px 5px rgba(70, 90, 10, 0.15);
+}
+
+.dots {
+  width: 28px;
+  text-align: center;
+  color: #77776f;
+  font-size: 16px;
+  letter-spacing: 2px;
 }

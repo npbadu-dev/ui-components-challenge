@@ -67,6 +67,27 @@ html {
   width: 41rem;
   box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.1);
 }
+.up{
+  transition: all .3s ease-out;
+}
+.up:hover{
+  transform: translateY(-3px);
+  cursor: pointer;
+}
+.up:active{
+  transform: scale(0.9);
+}
+.down{
+  transition: all .3s ease-out;
+}
+.down:hover{
+  transform: translateY(4px);
+  cursor: pointer;
+}
+.down:active{
+  transform: scale(0.9);
+}
+
 .text-box {
   padding: 2rem 1.8rem;
 }

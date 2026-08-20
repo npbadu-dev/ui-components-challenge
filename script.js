@@ -164,7 +164,7 @@ const components = [
     slug: "toast-notification",
     title: "Toast Notification",
     desc: "Non-modal alert with auto-dismiss and user interaction.",
-    built: false,
+    built: true,
   },
   {
     day: 24,

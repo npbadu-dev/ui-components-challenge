@@ -293,6 +293,9 @@ img {
 
   font-size: 13px;
 }
+.breadcrumbs span{
+  cursor: pointer;
+}
 
 .breadcrumbs .separator {
   color: #7b8492;

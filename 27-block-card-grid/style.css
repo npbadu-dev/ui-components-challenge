@@ -5,15 +5,125 @@
 }
 body {
   font-family: "Courier New", Courier, monospace;
+  background-color: #f6f6ee;
 }
 html {
   font-size: 62.5%;
   overflow-x: hidden;
 }
-.main-container{
-  background-color: #f6f6ee;
-  margin-top: 5rem;
+.main-container {
+  margin: 5rem 14rem;
+}
+.blog-img {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  height: 140px;
+  width: 100%;
+}
+.img-box {
+  position: relative;
+}
+.cate {
+  position: absolute;
+  bottom: -9px;
+  left: 25px;
+  color: #111;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  background-color: #ccc;
+  padding: 8px;
+  border-radius: 12px;
+}
+.blog {
+  padding: 2rem;
+}
+.blog-main-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #808f28;
+  margin-bottom: 0.8rem;
+}
+.main-heading {
+  font-size: 2.6rem;
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+}
+.main-desc {
+  font-size: 1.2rem;
+  color: #666;
+}
+.blog-card-section {
+  margin-top: 2.6rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+.blog-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 8px;
+  width: 41rem;
+  box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.1);
+}
+.text-box {
+  padding: 2rem 1.8rem;
+}
+.blog-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #333;
+}
+.txt-box-ro1 {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.blog-desc {
+  color: #555;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.txt-box-ro3 {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1.6rem;
+}
+.cal {
+  display: flex;
+  gap: 1rem;
+  color: #666;
+  font-size: 1.2rem;
+  align-items: center;
+}
+.dte {
+  border-right: 2px solid grey;
+  padding-right: 2rem;
+}
+.more-link {
   display: flex;
   align-items: center;
-  justify-content: center;
+  padding-left: 3rem;
+}
+.more {
+  color: #808f28;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.2rem;
+  transition: all 0.2s ease-out;
+}
+.right-arr {
+  transition: all 0.2s ease-out;
+}
+.more-link:hover .right-arr {
+  transform: rotate(90deg);
+}
+.more-link:hover .more {
+  text-decoration: underline;
+}
+.more-link:active .more{
+  text-decoration: none;
 }

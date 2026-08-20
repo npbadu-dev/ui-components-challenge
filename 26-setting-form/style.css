@@ -323,15 +323,62 @@ label {
   justify-content: center;
   align-items: center;
 }
-.icon-text-title{
+.icon-text-title {
   font-size: 1.4rem;
   font-weight: 600;
 }
-.icon-text-desc{
-  margin-top: .4rem;
+.icon-text-desc {
+  margin-top: 0.4rem;
   font-weight: 600;
   font-size: 1.2rem;
   color: #777;
+}
+
+/* ******* Appearance ********** */
+.appearance-card {
+  display: flex;
+  gap: 10rem;
+  padding-top: 3rem;
+  padding-left: 1.4rem;
+}
+.theme-card label {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #333;
+}
+.card-theme {
+  padding-top: 1.2rem;
+  display: flex;
+  gap: 2rem;
+}
+.th1 {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.2);
+  padding: 22px 32px;
+  font-size: 1.6rem;
+  border-radius: 12px;
+  width: 12.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.th-hover {
+  transition: all 0.3s ease;
+}
+.th-hover:hover {
+  box-shadow: 0 0 3px 3px rgba(101, 86, 236, 0.762);
+}
+.th1:active {
+  transform: scale(0.9);
+}
+.th-active {
+  box-shadow: 0 0 3px 3px rgba(101, 86, 236, 0.762);
+}
+.color-selector{
+  padding-top: 3rem;
 }
 
 /* ***(((( Toggle Switch )))) ******* */

@@ -203,9 +203,9 @@ const components = [
   },
   {
     day: 29,
-    slug: "landing-page",
-    title: "Landing Page",
-    desc: "Full marketing page assembled from earlier components.",
+    slug: "loader-animation",
+    title: "Loader Animation",
+    desc: "Visual indicator for loading states.",
     built: false,
   },
   {

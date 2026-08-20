@@ -210,9 +210,9 @@ const components = [
   },
   {
     day: 30,
-    slug: "popular-website-homepage-clone",
-    title: "Popular Website Homepage Clone",
-    desc: "Pixel-close recreation of a well-known homepage.",
+    slug: "multi-step-form",
+    title: "Multi-Step Form",
+    desc: "Form split into multiple logical steps with progress indication.",
     built: false,
   },
 ];

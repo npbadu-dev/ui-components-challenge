@@ -171,7 +171,7 @@ const components = [
     slug: "bubble",
     title: "Bubble",
     desc: "Displays conversational content in a message bubble",
-    built: false,
+    built: true,
   },
   {
     day: 25,

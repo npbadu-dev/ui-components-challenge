@@ -178,7 +178,7 @@ const components = [
     slug: "user-profile-card",
     title: "User Profile Card",
     desc: "Avatar, name, bio, and stats summary.",
-    built: false,
+    built: true,
   },
   {
     day: 26,

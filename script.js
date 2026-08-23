@@ -185,7 +185,7 @@ const components = [
     slug: "settings-form",
     title: "Settings Form",
     desc: "Grouped preference controls with toggles and selects.",
-    built: false,
+    built: true,
   },
   {
     day: 27,

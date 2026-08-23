@@ -182,7 +182,7 @@ const components = [
   },
   {
     day: 26,
-    slug: "settings-form",
+    slug: "setting-form",
     title: "Settings Form",
     desc: "Grouped preference controls with toggles and selects.",
     built: true,

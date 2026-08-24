@@ -192,7 +192,7 @@ const components = [
     slug: "blog-card-grid",
     title: "Blog Card Grid",
     desc: "Article previews with image, tag, and excerpt.",
-    built: false,
+    built: true,
   },
   {
     day: 28,

@@ -199,7 +199,7 @@ const components = [
     slug: "ecommerce-product-details",
     title: "E-commerce Product Details",
     desc: "Full product page with gallery, options, and add-to-cart.",
-    built: false,
+    built: true,
   },
   {
     day: 29,

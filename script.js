@@ -206,7 +206,7 @@ const components = [
     slug: "loader-animation",
     title: "Loader Animation",
     desc: "Visual indicator for loading states.",
-    built: false,
+    built: true,
   },
   {
     day: 30,

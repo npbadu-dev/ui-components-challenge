@@ -203,7 +203,7 @@ const components = [
   },
   {
     day: 29,
-    slug: "loader-animation",
+    slug: "loader",
     title: "Loader Animation",
     desc: "Visual indicator for loading states.",
     built: true,

@@ -213,7 +213,7 @@ const components = [
     slug: "multi-step-form",
     title: "Multi-Step Form",
     desc: "Form split into multiple logical steps with progress indication.",
-    built: false,
+    built: true,
   },
 ];
 
